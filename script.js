@@ -71,23 +71,57 @@ function initMap() {
         //@data returning JSON data
         success: function(data) {
           console.log(data);
-          var camId = data.items[0].cameras[0].camera_id
-          console.log("Camera ID: " + camId);
-          var datalat = data.items[0].cameras[0].location.latitude;
-          //var contentlat = "";
-          var datalng = data.items[0].cameras[0].location.longitude;
-          //var contentlng = "";
-          var image = data.items[0].cameras[0].image;
-          console.log(image);
-      
-          $("#camera").append(camId);
-          $("#coorLat").append(datalat);
-          $("#coorLng").append(datalng);
+          for (var i=0; i<(data.items[0].cameras).length; i++)
+          {
+            var camId = data.items[0].cameras[i].camera_id
+            console.log("Camera ID: " + camId);
+            var datalat = data.items[0].cameras[i].location.latitude;
+            //var contentlat = "";
+            var datalng = data.items[0].cameras[i].location.longitude;
+            //var contentlng = "";
+            var image = data.items[0].cameras[i].image;
+            console.log(image);
+
+            $("#header").append("<h3>Camera ID: " + camId + "</h3>");
+            $("#header").append("<h3>Latitude: " + datalat + "</h3>");
+            $("#header").append("<h3>Longitude: " + datalng + "</h3>" + "<br>");
+
+            var img = document.createElement("img");
+            img.src = image;
+            var src = document.getElementById("header");
+            $("#header").append("<h3>Traffic Image: </h3>");
+            src.appendChild(img);
+
+
+            var contentString =
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<div id="bodyContent">' +
+            "<p><b>Cam ID: </b>" + camId + "</p>" +
+            "<p><b>Latitude: </b>" + datalat + "</p>" +
+            "<p><b>Longitude: </b>" + datalng + "</p>" +
+            '<button id="details">View Details</button>' +
+            "</div>" +
+            "</div>";
+
+            addMarker({
+              coords:{lat: datalat, lng: datalng},
+              content: contentString
+            });
+          }
+
+          /*
+          $("#header").append("<h3>Camera ID: " + camId + "</h3>");
+          $("#header").append("<h3>Latitude: " + datalat + "</h3>");
+          $("#header").append("<h3>Longitude: " + datalng + "</h3>" + "<br>");
 
           var img = document.createElement("img");
           img.src = image;
           var src = document.getElementById("header");
+          $("#header").append("<h3>Traffic Image: </h3>");
           src.appendChild(img);
+
 
           var contentString =
           '<div id="content">' +
@@ -95,19 +129,17 @@ function initMap() {
           "</div>" +
           '<div id="bodyContent">' +
           "<p><b>Cam ID: </b>" + camId + "</p>" +
-          "<b>Latitude: </b>" + datalat + "</p>" +
-          "<b>Longitude: </b>" + datalng + "</p>" +
-          "<b>Image: </b>" + img + "</p>" +
-          '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-          "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
-          "(last visited June 22, 2009).</p>" +
+          "<p><b>Latitude: </b>" + datalat + "</p>" +
+          "<p><b>Longitude: </b>" + datalng + "</p>" +
+          '<button id="details">View Details</button>' +
           "</div>" +
           "</div>";
 
           addMarker({
             coords:{lat: datalat, lng: datalng},
             content: contentString
-          });
+          });*/
+
         }
         })
     });
