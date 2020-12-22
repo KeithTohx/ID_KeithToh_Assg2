@@ -76,15 +76,13 @@ function initMap() {
             var camId = data.items[0].cameras[i].camera_id
             console.log("Camera ID: " + camId);
             var datalat = data.items[0].cameras[i].location.latitude;
-            //var contentlat = "";
             var datalng = data.items[0].cameras[i].location.longitude;
-            //var contentlng = "";
             var image = data.items[0].cameras[i].image;
             console.log(image);
 
             $("#header").append("<h3>Camera ID: " + camId + "</h3>");
             $("#header").append("<h3>Latitude: " + datalat + "</h3>");
-            $("#header").append("<h3>Longitude: " + datalng + "</h3>" + "<br>");
+            $("#header").append("<h3>Longitude: " + datalng + "</h3>");
 
             var img = document.createElement("img");
             img.src = image;
@@ -99,8 +97,8 @@ function initMap() {
             "</div>" +
             '<div id="bodyContent">' +
             "<p><b>Cam ID: </b>" + camId + "</p>" +
-            "<p><b>Latitude: </b>" + datalat + "</p>" +
-            "<p><b>Longitude: </b>" + datalng + "</p>" +
+            //"<p><b>Latitude: </b>" + datalat + "</p>" +
+            //"<p><b>Longitude: </b>" + datalng + "</p>" +
             '<button id="details">View Details</button>' +
             "</div>" +
             "</div>";
@@ -109,36 +107,14 @@ function initMap() {
               coords:{lat: datalat, lng: datalng},
               content: contentString
             });
+
+            /*var details = document.getElementById("details");
+            details.addListener('click', function(){
+              $("#header").append("<h3>Camera ID: " + camId + "</h3>");
+              $("#header").append("<h3>Latitude: " + datalat + "</h3>");
+              $("#header").append("<h3>Longitude: " + datalng + "</h3>" + "<br>");
+            });*/
           }
-
-          /*
-          $("#header").append("<h3>Camera ID: " + camId + "</h3>");
-          $("#header").append("<h3>Latitude: " + datalat + "</h3>");
-          $("#header").append("<h3>Longitude: " + datalng + "</h3>" + "<br>");
-
-          var img = document.createElement("img");
-          img.src = image;
-          var src = document.getElementById("header");
-          $("#header").append("<h3>Traffic Image: </h3>");
-          src.appendChild(img);
-
-
-          var contentString =
-          '<div id="content">' +
-          '<div id="siteNotice">' +
-          "</div>" +
-          '<div id="bodyContent">' +
-          "<p><b>Cam ID: </b>" + camId + "</p>" +
-          "<p><b>Latitude: </b>" + datalat + "</p>" +
-          "<p><b>Longitude: </b>" + datalng + "</p>" +
-          '<button id="details">View Details</button>' +
-          "</div>" +
-          "</div>";
-
-          addMarker({
-            coords:{lat: datalat, lng: datalng},
-            content: contentString
-          });*/
 
         }
         })
