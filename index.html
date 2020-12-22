@@ -7,8 +7,23 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    
+    <div>
+      <h1>Traffic Condition</h1>
+      <label for="date">Enter date in YYYY-MM-DD[T]HH:MM:SS format:</label><br>
+      <input type="text" id="date" name="date"><br>
+      <button id="checker">Search</button>
+
+      <h3 id="coorLat">Lat: </h3>
+      <h3 id="coorLng">Lng: </h3>
+
+      <div id="header"></div>
+      <div id="map"></div>
+
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs-kdfEO9r-dGNu1dpZc-imYYIZYbiLZM&callback=initMap"
+    async defer></script>
   </body>
 </html>
