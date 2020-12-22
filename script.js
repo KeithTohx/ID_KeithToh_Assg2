@@ -31,7 +31,7 @@ function initMap() {
 
     // check content
     if (props.content){
-      var infoWindow = new google.maps.InfoWindow({
+      let infoWindow = new google.maps.InfoWindow({
         content: props.content
       });
     
@@ -97,23 +97,16 @@ function initMap() {
             "</div>" +
             '<div id="bodyContent">' +
             "<p><b>Cam ID: </b>" + camId + "</p>" +
-            //"<p><b>Latitude: </b>" + datalat + "</p>" +
-            //"<p><b>Longitude: </b>" + datalng + "</p>" +
             '<button id="details">View Details</button>' +
             "</div>" +
             "</div>";
+
 
             addMarker({
               coords:{lat: datalat, lng: datalng},
               content: contentString
             });
 
-            /*var details = document.getElementById("details");
-            details.addListener('click', function(){
-              $("#header").append("<h3>Camera ID: " + camId + "</h3>");
-              $("#header").append("<h3>Latitude: " + datalat + "</h3>");
-              $("#header").append("<h3>Longitude: " + datalng + "</h3>" + "<br>");
-            });*/
           }
 
         }
