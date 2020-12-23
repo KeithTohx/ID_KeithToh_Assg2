@@ -11,3 +11,14 @@ a {
 p, label {
     font-family: 'Open Sans', sans-serif;
 }
+
+.title {
+    background-color: #edf0f1; 
+    margin-top: 25px; 
+    text-align: center; 
+    font-size: 20px;
+}
+
+.text {
+    margin-left: 1%
+}
