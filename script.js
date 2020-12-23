@@ -71,6 +71,8 @@ function initMap() {
         //@data returning JSON data
         success: function(data) {
           console.log(data);
+          $("#details").append('<p class="title"><b>Details</b></p>');
+          
           for (var i=0; i<(data.items[0].cameras).length; i++)
           {
             var camId = data.items[0].cameras[i].camera_id
@@ -86,16 +88,23 @@ function initMap() {
             var src = document.getElementById("details");
             src.appendChild(div);
 
-            $("#info").append('<p style="padding-top: 25px;"><b>Camera ID: </b>' + camId + "</p>");
-            $("#info").append("<p><b>Latitude: </b>" + datalat + "</p>");
-            $("#info").append("<p><b>Longitude: </b>" + datalng + "</p>");
-            $("#info").append("<p><b>Time Stamp: </b>" + dataDT + "</p>");
+            $("#info").css({
+              'background-color' : '#edf0f1',
+              'padding-bottom' : '15px',
+              'margin-bottom' : '10px'
+            });
+              
+            $("#info").append('<p class="text"><b>Camera ID: </b>' + camId + "</p>");
+            $("#info").append('<p class="text"><b>Latitude: </b>' + datalat + "</p>");
+            $("#info").append('<p class="text"><b>Longitude: </b>' + datalng + "</p>");
+            $("#info").append('<p class="text"><b>Time Stamp: </b>' + dataDT + "</p>");
 
             var img = document.createElement("img");
             img.src = image;
-            img.width = 320;
+            img.className = "img-fluid";
+            //img.width = 320;
             var src = document.getElementById("info");
-            $("#info").append("<p><b>Traffic Image: </b></p>");
+            $("#info").append('<p class="text"><b>Traffic Image: </b></p>');
             src.appendChild(img);
 
             document.getElementById("info").id = "infoDone";
