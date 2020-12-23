@@ -77,19 +77,28 @@ function initMap() {
             console.log("Camera ID: " + camId);
             var datalat = data.items[0].cameras[i].location.latitude;
             var datalng = data.items[0].cameras[i].location.longitude;
+            var dataDT = new Date(data.items[0].cameras[i].timestamp);
             var image = data.items[0].cameras[i].image;
             console.log(image);
 
-            $("#header").append("<h3>Camera ID: " + camId + "</h3>");
-            $("#header").append("<h3>Latitude: " + datalat + "</h3>");
-            $("#header").append("<h3>Longitude: " + datalng + "</h3>");
+            var div = document.createElement("div");
+            div.id = "info";
+            var src = document.getElementById("details");
+            src.appendChild(div);
+
+            $("#info").append('<p style="padding-top: 25px;"><b>Camera ID: </b>' + camId + "</p>");
+            $("#info").append("<p><b>Latitude: </b>" + datalat + "</p>");
+            $("#info").append("<p><b>Longitude: </b>" + datalng + "</p>");
+            $("#info").append("<p><b>Time Stamp: </b>" + dataDT + "</p>");
 
             var img = document.createElement("img");
             img.src = image;
-            var src = document.getElementById("header");
-            $("#header").append("<h3>Traffic Image: </h3>");
+            img.width = 320;
+            var src = document.getElementById("info");
+            $("#info").append("<p><b>Traffic Image: </b></p>");
             src.appendChild(img);
 
+            document.getElementById("info").id = "infoDone";
 
             var contentString =
             '<div id="content">' +
@@ -97,7 +106,6 @@ function initMap() {
             "</div>" +
             '<div id="bodyContent">' +
             "<p><b>Cam ID: </b>" + camId + "</p>" +
-            '<button id="details">View Details</button>' +
             "</div>" +
             "</div>";
 
@@ -107,7 +115,7 @@ function initMap() {
               content: contentString
             });
 
-          }
+          };
 
         }
         })
