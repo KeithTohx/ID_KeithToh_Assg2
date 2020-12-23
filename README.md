@@ -16,7 +16,7 @@
 * [Bootstrap](https://getbootstrap.com/)
     * This project uses Bootstrap to layout contents on the website.
 * APIs
-    * [Data.Gov](https://data.gov.sg/)
+    * [Data.gov.sg](https://data.gov.sg/)
         * This project uses Traffic Images API from Data.Gov to retrieve images of the roads of Singapore and the location of the cameras. 
     * [Google Maps](https://developers.google.com/maps/apis-by-platform)
         * This project uses Google Maps JavaScript API to display a Google Map on the website, as well as the exact locations of every traffic cameras.
