@@ -71,6 +71,7 @@ function initMap() {
         //@data returning JSON data
         success: function(data) {
           console.log(data);
+          $(".title").append('<b>Location of Cameras</b>')
           $("#details").append('<p class="title"><b>Details</b></p>');
           
           for (var i=0; i<(data.items[0].cameras).length; i++)
