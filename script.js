@@ -71,7 +71,6 @@ function initMap() {
         //@data returning JSON data
         success: function(data) {
           console.log(data);
-          $(".title").append('<b>Location of Cameras</b>')
           $("#details").append('<p class="title"><b>Details</b></p>');
           
           for (var i=0; i<(data.items[0].cameras).length; i++)
@@ -115,7 +114,9 @@ function initMap() {
             '<div id="siteNotice">' +
             "</div>" +
             '<div id="bodyContent">' +
-            "<p><b>Cam ID: </b>" + camId + "</p>" +
+            "<p>Cam ID: " + camId + 
+            "<p>Latitude: " + datalat + 
+            "<p>Longitude: " + datalng + "</p>" +
             "</div>" +
             "</div>";
 
