@@ -71,6 +71,7 @@ function initMap() {
 
     $(document).ready(function(updatedata) {
       //@params settings
+      console.log("ready");
       var params = {
         // //YYYY-MM-DD[T]HH:mm:ss (SGT)
         "date_time": input_date
@@ -148,6 +149,11 @@ function initMap() {
 
           };
 
+        },
+        error: function(data) {
+          //var errorM = data.message;
+          console.log("invalid datetime format");
+          alert("Invalid datetime format \nCorrect format: YYYY-MM-DD[T]HH:MM:SS");
         }
         })
     });
