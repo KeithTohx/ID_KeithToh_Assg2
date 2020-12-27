@@ -26,4 +26,5 @@ Link to Adobe XD: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-7d3748a085d5
 ## Credits
 ### Content
 ### Media
+The icons used in the Google Maps were from Google Earth/Maps Icons website (http://kml4earth.appspot.com/icons.html#shapes).
 ### Acknowledgements
