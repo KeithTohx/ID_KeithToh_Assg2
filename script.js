@@ -76,7 +76,7 @@ function initMap() {
         //@data returning JSON data
         success: function(data) {
           console.log(data);
-          $("#details").append('<p class="title"><b>Details</b></p>');
+          $("#details").before('<p class="title"><b>Traffic Details</b></p>');
           
           for (var i=0; i<(data.items[0].cameras).length; i++)
           {
@@ -107,7 +107,7 @@ function initMap() {
             var img = document.createElement("img");
             img.src = image;
             img.className = "img-fluid";
-            //img.width = 320;
+            img.width = 320;
             var src = document.getElementById("info");
             $("#info").append('<p class="text"><b>Traffic Image: </b></p>');
             src.appendChild(img);
