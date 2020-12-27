@@ -47,9 +47,8 @@ function initMap() {
   }
 
 
-
-  let checker = document.getElementById('checker');
-  checker.addEventListener('click', function() {
+  let searchBtn = document.getElementById('searchBtn');
+  searchBtn.addEventListener('click', function() {
     console.log('hi');
     var input_date = document.getElementById('date').value;;
     console.log(input_date);
@@ -76,7 +75,7 @@ function initMap() {
         //@data returning JSON data
         success: function(data) {
           console.log(data);
-          $("#details").before('<p class="title"><b>Traffic Details</b></p>');
+          $("#details").before('<p id="td" class="title"><b>Traffic Details</b></p>');
           
           for (var i=0; i<(data.items[0].cameras).length; i++)
           {
@@ -139,4 +138,13 @@ function initMap() {
     });
   }, false);
 
+  let emptyBtn = document.getElementById('emtpyBtn');
+  emptyBtn.addEventListener('click', function() {
+    console.log('bye');
+
+    $(document).ready(function(updatedata) {
+      $('#td').remove();
+      $('#details').empty();
+    });
+  }, false);
 };
