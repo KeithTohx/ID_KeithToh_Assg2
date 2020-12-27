@@ -9,20 +9,6 @@ function initMap() {
   // new map
   var map = new google.maps.Map(document.getElementById('map'), options);
 
-  // add marker
-  /*var marker = new google.maps.Marker({
-    position: {lat: 1.333498666, lng: 103.772830242},
-    map: map
-  });
-
-  var infoWindow = new google.maps.InfoWindow({
-    content: '<h1>Ngee Ann Poly</h1>'
-  });
-
-  marker.addListener('click', function(){
-    infoWindow.open(map, marker);
-  });*/
-
   // Adds a marker to the map and push to the array
   function addMarker(props){
     var marker = new google.maps.Marker({
@@ -48,14 +34,14 @@ function initMap() {
     }
   }
 
-  // Sets the map on all markers in the array
+  // sets the map on all markers in the array
   function setMapOnAll(map) {
     for (let i = 0; i < markersArray.length; i++) {
       markersArray[i].setMap(map);
     }
   }
 
-  // Deletes all markers in the array by removing references to them
+  // deletes all markers in the array by removing references to them
   function deleteMarkers() {
     setMapOnAll(null);
     markersArray = [];
@@ -140,7 +126,7 @@ function initMap() {
             "</div>" +
             "</div>";
 
-
+            // call function to add marker on map
             addMarker({
               coords:{lat: datalat, lng: datalng},
               iconImage: 'images/camera.png',
@@ -150,10 +136,10 @@ function initMap() {
           };
 
         },
+        // if input is incorrect (wrong format)
         error: function(data) {
-          //var errorM = data.message;
           console.log("invalid datetime format");
-          alert("Invalid datetime format \nCorrect format: YYYY-MM-DD[T]HH:MM:SS");
+          alert("Invalid datetime format \nCorrect format: YYYY-MM-DD[T]HH:mm:ss");
         }
         })
     });

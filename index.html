@@ -25,7 +25,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Online Services
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- links to websites offering digital services -->
               <a class="dropdown-item" href="https://www.lta.gov.sg/feedback" target="_blank"><b>LTA Feedback</b></a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="https://www.onemotoring.com/content/" target="_blank"><b>Vehicle-related Transactions</b></a>
@@ -41,7 +41,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Emergency Contact
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- list of emergency contact -->
               <a class="dropdown-item"><b>Police:</b> 999</a>
               <a class="dropdown-item"><b>Police Emergency SMS:</b> 71999</a>
               <a class="dropdown-item"><b>Police Hotline:</b> 1800 255 0000</a>
@@ -55,15 +55,15 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container"> <!-- section1: user inputs -->
       <label for="date" style="margin-top: 10px;">Enter Date & Time:</label><br>
-      <input type="text" id="date" name="date" placeholder="YYYY-MM-DD[T]HH:MM:SS" style="width: 240px;" title="Enter in YYYY-MM-DD[T]HH:MM:SS format"><br>
+      <input type="text" id="date" name="date" placeholder="YYYY-MM-DD[T]HH:mm:ss" style="width: 240px;" title="Enter in YYYY-MM-DD[T]HH:mm:ss format"><br>
       <button id="searchBtn" style="margin-bottom: 10px;">Search</button>
       <button id="emtpyBtn" style="margin-bottom: 10px;">Clear Results</button>
     </div>
-    <div class="container" style="padding-bottom: 20px;">
+    <div class="container" style="padding-bottom: 20px;"> <!-- section2: google maps & details -->
       <p class="title"><b>Location of Cameras</b></p>
-      <div id="map"></div>
+      <div id="map"></div> <!-- where google maps will display -->
       <div id="details" class="flex-container"></div>
     </div>
 
