@@ -1,4 +1,4 @@
-
+let markersArray = [];
 
 function initMap() {
   // map options
@@ -23,11 +23,13 @@ function initMap() {
     infoWindow.open(map, marker);
   });*/
 
+  // Adds a marker to the map and push to the array
   function addMarker(props){
     var marker = new google.maps.Marker({
       position: props.coords,
       map: map
     });
+    markersArray.push(marker);
 
     // check for custom icon
     if (props.iconImage){
@@ -44,6 +46,19 @@ function initMap() {
         infoWindow.open(map, marker);
       });
     }
+  }
+
+  // Sets the map on all markers in the array
+  function setMapOnAll(map) {
+    for (let i = 0; i < markersArray.length; i++) {
+      markersArray[i].setMap(map);
+    }
+  }
+
+  // Deletes all markers in the array by removing references to them
+  function deleteMarkers() {
+    setMapOnAll(null);
+    markersArray = [];
   }
 
 
@@ -145,6 +160,7 @@ function initMap() {
     $(document).ready(function(updatedata) {
       $('#td').remove();
       $('#details').empty();
+      deleteMarkers();
     });
   }, false);
 };
