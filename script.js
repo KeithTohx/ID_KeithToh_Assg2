@@ -29,6 +29,11 @@ function initMap() {
       map: map
     });
 
+    // check for custom icon
+    if (props.iconImage){
+      marker.setIcon(props.iconImage);
+    }
+
     // check content
     if (props.content){
       let infoWindow = new google.maps.InfoWindow({
@@ -123,7 +128,8 @@ function initMap() {
 
             addMarker({
               coords:{lat: datalat, lng: datalng},
-              content: contentString
+              iconImage: 'images/camera.png',
+              content: contentString,
             });
 
           };
