@@ -14,9 +14,11 @@ Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-7d
 ### Existing Features 
 * Feature 1: Links to Government Digital Services (related to vehicle/driving) on navigation bar.
 * Feature 2: List of Emergency Hotlines/Contacts on navigation bar.
-* Feature 3: Search Traffic Conditions based on Date and Time:
+* Feature 3: View User Cuurent Location on Google Maps
+    * Click on the "Pan to Current Location" button on the top of the map to shift the view of the map so that the User's current location is in the centre. A marker pin will also be shown on the map to represent the User's current location.
+* Feature 4: Search Traffic Conditions based on Date and Time:
     * Output includes Location of Cameras on Map, Camera ID, Coordinates of Camera, Image of Traffic and Timestamp.
-* Feature 4: Search Weather Conditions (Rainfall) based on Date and Time:
+* Feature 5: Search Weather Conditions (Rainfall) based on Date and Time:
     * Output includes Location of Weather Stations on Map, Device ID, Coordinates of Detectors and Timestamp.
 ### Features Left to Implement
 * Feature: Dark and Light Mode
