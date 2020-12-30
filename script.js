@@ -10,6 +10,7 @@ function initMap() {
   // new map
   var map = new google.maps.Map(document.getElementById('map'), options);
 
+  // User current location
   infoWindow = new google.maps.InfoWindow();
   const locationButton = document.createElement("button");
   locationButton.textContent = "Pan to Current Location";
@@ -50,6 +51,7 @@ function initMap() {
       handleLocationError(false, infoWindow, map.getCenter());
     }
   });
+
 
   // SG TRAFFIC IMAGES
   // Adds a marker to the map and push to the array
@@ -96,13 +98,12 @@ function initMap() {
     console.log('hi traffic');
     var input_date = document.getElementById('dateTraf').value;;
     console.log(input_date);
-  //}, false);
 
     $(document).ready(function(updatedata) {
       //@params settings
       console.log("ready traffic");
       var params = {
-        // //YYYY-MM-DD[T]HH:mm:ss (SGT)
+        // YYYY-MM-DD[T]HH:mm:ss (SGT)
         "date_time": input_date
         };
       
@@ -200,7 +201,6 @@ function initMap() {
   }, false);
 
 
-
   // SG WEATHER - RAINFALL
   // Adds a marker to the map and push to the array
   function addMarkerRain(props){
@@ -246,13 +246,12 @@ function initMap() {
     console.log('hi rain');
     var input_date = document.getElementById('dateRain').value;;
     console.log(input_date);
-  //}, false);
 
     $(document).ready(function(updatedata) {
       //@params settings
       console.log("ready rain");
       var params = {
-        // //YYYY-MM-DD[T]HH:mm:ss (SGT)
+        // YYYY-MM-DD[T]HH:mm:ss (SGT)
         "date_time": input_date
         };
       
@@ -280,7 +279,6 @@ function initMap() {
             console.log("Device ID: " + deviceId);
             var datalatRain = data.metadata.stations[i].location.latitude;
             var datalngRain = data.metadata.stations[i].location.longitude;
-            //var dataTSRain = new Date(data.items[0].timestamp);
             var dataReadingUnit = data.metadata.reading_unit;
             var dataValueRain = data.items[0].readings[i].value;
 
@@ -326,6 +324,7 @@ function initMap() {
   }, false);
 };
 
+// for current location
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(
