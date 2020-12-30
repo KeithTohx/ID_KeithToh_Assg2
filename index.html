@@ -12,7 +12,7 @@
   <a name="top"></a>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #edf0f1;">
-      <a class="navbar-brand"><b>Traffic Condition in Singapore</b></a>
+      <a class="navbar-brand"><b>SG Traffic & Weather Condition</b></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -56,16 +56,29 @@
     </nav>
 
     <div class="container"> <!-- section1: user inputs -->
-      <label for="date" style="margin-top: 10px;">Enter Date & Time:</label><br>
-      <input type="text" id="date" name="date" placeholder="YYYY-MM-DD[T]HH:mm:ss" style="width: 240px;" title="Enter in YYYY-MM-DD[T]HH:mm:ss format"><br>
-      <button id="searchBtn" style="margin-bottom: 10px;">Search</button>
-      <button id="emtpyBtn" style="margin-bottom: 10px;">Clear Results</button>
-    </div>
-    <div class="container" style="padding-bottom: 20px;"> <!-- section2: google maps & details -->
-      <p class="title"><b>Location of Cameras</b></p>
+      <div class="row">
+        <div class="col-sm">
+          <p style="margin-bottom: 0%; margin-top: 10px;"><b>SG Traffic</b></p>
+          <label for="date">Enter Date & Time:</label><br>
+          <input type="text" id="dateTraf" name="dateTraf" placeholder="YYYY-MM-DD[T]HH:mm:ss" style="width: 240px;" title="Enter in YYYY-MM-DD[T]HH:mm:ss format"><br>
+          <button id="searchTraf" style="margin-bottom: 10px;">Search</button>
+          <button id="emtpyTraf" style="margin-bottom: 10px;">Clear Results</button>
+        </div>
+        <div class="col-sm">
+          <p style="margin-bottom: 0%; margin-top: 10px;"><b>SG Weather</b></p>
+          <label for="date">Enter Date & Time:</label><br>
+          <input type="text" id="dateRain" name="dateRain" placeholder="YYYY-MM-DD[T]HH:mm:ss" style="width: 240px;" title="Enter in YYYY-MM-DD[T]HH:mm:ss format"><br>
+          <button id="searchRain" style="margin-bottom: 10px;">Search</button>
+          <button id="emtpyRain" style="margin-bottom: 10px;">Clear Results</button>
+        </div>
+      </div>
+    </div> <!-- end of container - section1 -->
+
+    <div class="container" style="padding-bottom: 20px; margin-top: 20px;"> <!-- section2: google maps & details -->
+      <!-- <p class="title"><b>Location of Cameras</b></p> -->
       <div id="map"></div> <!-- where google maps will display -->
       <div id="details" class="flex-container"></div>
-    </div>
+    </div> <!-- end of container - section2 -->
 
     <footer>
       <a href="#top" style="color: black;">Back to Top</a> <!-- to bring users back to top of page -->
