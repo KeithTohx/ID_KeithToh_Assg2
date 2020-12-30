@@ -1,3 +1,4 @@
+// lists to store Traffic and Rainfall markers
 let markersArrayTraf = [];
 let markersArrayRain = [];
 
@@ -29,6 +30,7 @@ function initMap() {
           infoWindow.setContent("Location found.");
           infoWindow.open(map);
           map.setCenter(pos);
+          // create user marker on map
           var markerUser = new google.maps.Marker({
             position: pos,
             map: map
