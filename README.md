@@ -3,7 +3,7 @@
 This Project allows users to check the traffic condition in Singapore based on traffic images displayed, as well as the rainfall value at different parts of Singapore.
 
 ## Design Process
-This website is intended for drivers and road users in general. They will be able to know if the roads they would like to travel on is congested, and plan their journey accordingly if they wish to avoid the congestion. Users will also be able to know if the place they are visiting is/was raining at certain date and time. This website shows a map with all the location of traffic cameras and weather detector stations in operation, as well as the images taken by the cameras.
+This website is intended for drivers and road users in general. They will be able to know if the roads they would like to travel on is congested, and plan their journey accordingly if they wish to avoid the congestion. Users will also be able to know if a place is/was raining at certain dates and timings. This website shows a map with all the location of traffic cameras and weather detector stations in operation, as well as the images taken by the cameras.
 
 User Stories:
 * As a driver, I want to ...
