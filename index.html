@@ -11,21 +11,20 @@
   </head>
   <a name="top"></a>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #edf0f1;">
+    <!-- navigation bar at top of page -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #edf0f1;"> 
       <a class="navbar-brand"><b>SG Traffic & Weather Condition</b></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <!-- <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li> -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Online Services
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- links to websites offering digital services -->
+            <!-- links to websites offering digital services -->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"> 
               <a class="dropdown-item" href="https://www.lta.gov.sg/feedback" target="_blank"><b>LTA Feedback</b></a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="https://www.onemotoring.com.sg/content/onemotoring/home.html" target="_blank"><b>Vehicle-related Transactions</b></a>
@@ -40,7 +39,8 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Emergency Contact
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- list of emergency contact -->
+            <!-- list of emergency contact -->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item"><b>Police:</b> 999</a>
               <a class="dropdown-item"><b>Police Emergency SMS:</b> 71999</a>
               <a class="dropdown-item"><b>Police Hotline:</b> 1800 255 0000</a>
@@ -54,7 +54,8 @@
       </div>
     </nav>
 
-    <div class="container"> <!-- section1: user inputs -->
+    <!-- section1: user inputs -->
+    <div class="container"> 
       <div class="row">
         <div class="col-sm" id="userTraf">
           <p style="margin-bottom: 0%; margin-top: 10px;"><b>Singapore Traffic</b></p>
@@ -73,14 +74,14 @@
       </div>
     </div> <!-- end of container - section1 -->
 
-    <div class="container" style="padding-bottom: 20px; margin-top: 20px;"> <!-- section2: google maps & details -->
-      <!-- <p class="title"><b>Location of Cameras</b></p> -->
+    <!-- section2: google maps & details -->
+    <div class="container" style="padding-bottom: 20px; margin-top: 20px;"> 
       <div id="map"></div> <!-- where google maps will display -->
       <div id="details" class="flex-container"></div>
     </div> <!-- end of container - section2 -->
 
     <footer>
-      <a href="#top" style="color: black;">Back to Top</a> <!-- to bring users back to top of page -->
+      <a href="#top" style="color: black;">Back to Top</a> <!-- brings users back to top of page -->
       <p style="padding-top: 10px; margin-bottom: 0%;">© 2020 Keith Toh</p>
     </footer>
 
