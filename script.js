@@ -80,7 +80,7 @@ function initMap() {
         //@data returning JSON data
         success: function(data) {
           console.log(data);
-          $("#details").before('<p id="td" class="title"><b>Traffic Details</b></p>');
+          $("#details").before('<p id="traffic" class="title"><b>Traffic Details</b></p>');
           
           for (var i=0; i<(data.items[0].cameras).length; i++)
           {
@@ -153,7 +153,7 @@ function initMap() {
     console.log('bye traffic');
 
     $(document).ready(function(updatedata) {
-      $('#td').remove();
+      $('#traffic').remove();
       $('#details').empty();
       deleteMarkersTraf();
     });
@@ -231,14 +231,16 @@ function initMap() {
         success: function(data) {
           console.log(data);
           
+          var dataTSRain = new Date(data.items[0].timestamp);
+          $("#map").after('<p id="rain" class="title"><b>Weather Time Stamp: </b>' + dataTSRain + '</p>');
+
           for (var i=0; i<(data.metadata.stations).length; i++)
           {
             var deviceId = data.metadata.stations[i].device_id;
             console.log("Device ID: " + deviceId);
             var datalatRain = data.metadata.stations[i].location.latitude;
             var datalngRain = data.metadata.stations[i].location.longitude;
-            var dataTSRain = new Date(data.items[0].timestamp);
-            var dataReadingType = data.metadata.reading_type;
+            //var dataTSRain = new Date(data.items[0].timestamp);
             var dataReadingUnit = data.metadata.reading_unit;
             var dataValueRain = data.items[0].readings[i].value;
 
@@ -278,6 +280,7 @@ function initMap() {
     console.log('bye rain');
 
     $(document).ready(function(updatedata) {
+      $('#rain').remove();
       deleteMarkersRain();
     });
   }, false);
