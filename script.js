@@ -342,7 +342,7 @@ $(document).ready(function () {
       $("nav, footer").css({
         'background-color' : '#24252a'
       });
-      $("a.navbar-brand, a.nav-link, a.dropdown-item, footer a, p, label").css({
+      $("a.navbar-brand, a.nav-link, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, p#traffic.title, div#infoDone p").css({
         'color' : '#edf0f1'
       });
       $("div.dropdown-menu, p#traffic.title, div#infoDone, p#rain.title").css({
@@ -362,7 +362,7 @@ $(document).ready(function () {
       $("a.nav-link").css({
         'color' : 'rgba(0,0,0,.5)'
       });
-      $("a.navbar-brand, a.dropdown-item, footer a, p, label").css({
+      $("a.navbar-brand, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, p#traffic.title, div#infoDone p").css({
         'color' : 'black'
       });
       $("body, div.dropdown-menu").css({
