@@ -340,7 +340,7 @@ $(document).ready(function () {
   $(".special").click(function () {
     if ($(this).hasClass('light')) {
       // dark mode
-      $(this).attr('class', 'nav-link dark');
+      $(this).attr('class', 'nav-link special dark');
       $("a.dark").text("Switch to Light Mode");
       $("body").css({
         'background-color' : '#35363b'
@@ -356,7 +356,7 @@ $(document).ready(function () {
       });
     } else {
       // light mode
-      $(this).attr('class', 'nav-link light');
+      $(this).attr('class', 'nav-link special light');
       $("a.light").text("Switch to Dark Mode");
       $("nav, footer").css({
         'background-color' : '#edf0f1'
