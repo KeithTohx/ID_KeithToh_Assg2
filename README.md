@@ -1,13 +1,15 @@
 # ID_KeithToh_Assg2
-#### Traffic Condition in Singapore
+#### Traffic & Weather Condition in Singapore
 This Project allows users to check the traffic condition in Singapore based on traffic images displayed, as well as the rainfall value at different parts of Singapore.
 
 ## Design Process
-This website is intended for drivers and road users in general. They will be able to know if the roads they would like to travel on is congested, and plan their journey accordingly if they wish to avoid the congestion. Users will also be able to know if a place is/was raining at certain dates and timings. All the users need to do is to enter the date and time which they want to search into the input boxes. This website will then show a map with all the location of traffic cameras and weather detector stations in operation, as well as the images taken by the cameras and the rainfall values.
+This website is intended for drivers, road users in general and those researching about traffic conditions and rainfall in Singapore. They will be able to know if the roads they would like to travel on is congested, and plan their journey accordingly if they wish to avoid the congestion. Users will also be able to know if a place is/was raining at certain dates and timings. All the users need to do is to enter the date and time which they want to search into the input boxes. This website will then show a map with all the location of traffic cameras and weather detector stations in operation, as well as the images taken by the cameras and the rainfall values.
 
 User Stories:
 * As a driver, I want to check if a certain section of the road is congested, so that I can better plan my journey to avoid reaching my destination late.
 * As a driver, I want to check if a certain section of the road has a high rainfall value, so that I can decide if I want to travel using that road in case of flooding.
+* As a researcher, I want to view traffic images captured at certain places at specific timings, so that I can determine the trend of vehicles driving past the places at those timings.
+* As a researcher, I want to check if certain places rained at specific timings, so that I can determine the trend of rainfall in Singapore.
 
 Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-7d3748a085d5-4359/
 
@@ -36,7 +38,7 @@ Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-7d
         * This project uses Google Maps JavaScript API to display a Google Map on the website, as well as the exact locations of every traffic cameras and weather stations.
 
 ## Testing
-1. Search for Traffic/ Weather Details:
+1. Scenario - Search for Traffic/ Weather Details:
     1. Scroll to the top of the website/ Click on the 'Back to Top' button at the bottom of the page.
     2. Verify that an error message about entering the datetime in the correct format appears when:
         * the input only has the date value;
@@ -55,4 +57,4 @@ Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-7d
 ### Media
 The icons used in the Google Maps were from Google Earth/Maps Icons website (http://kml4earth.appspot.com/icons.html#shapes).
 ### Acknowledgements
-I received inspiration for Feature 7 (Light & Dark Modes) from various Smartphone Operating Systems offering both Light and Dark Mode appearances.
+I received inspiration for Feature 7 (Light & Dark Modes) from various Smartphone Operating Systems offering both Light Mode and Dark Mode appearances.
