@@ -7,7 +7,7 @@ function initMap() {
   var options = {
     center: {lat: 1.3656, lng: 103.8530},
     zoom: 11
-  }
+  };
   // new map
   var map = new google.maps.Map(document.getElementById('map'), options);
 
@@ -97,7 +97,7 @@ function initMap() {
   let searchTraf = document.getElementById('searchTraf');
   searchTraf.addEventListener('click', function() {
     console.log('hi traffic');
-    var input_date = document.getElementById('dateTraf').value;;
+    var input_date = document.getElementById('dateTraf').value;
     console.log(input_date);
 
     $(document).ready(function(updatedata) {
@@ -126,7 +126,7 @@ function initMap() {
           
           for (var i=0; i<(data.items[0].cameras).length; i++)
           {
-            var camId = data.items[0].cameras[i].camera_id
+            var camId = data.items[0].cameras[i].camera_id;
             var datalatTraf = data.items[0].cameras[i].location.latitude;
             var datalngTraf = data.items[0].cameras[i].location.longitude;
             var dataTSTraf = new Date(data.items[0].cameras[i].timestamp);
@@ -175,14 +175,14 @@ function initMap() {
               iconImageTraf: 'images/camera.png',
               content: contentStringTraf
             });
-          };
+          }
         },
         // if input is incorrect (wrong format)
         error: function(data) {
           console.log("invalid datetime format");
           alert("Invalid datetime format \nCorrect format: YYYY-MM-DD[T]HH:mm:ss \n(e.g.: 2020-12-31T23:59:59)");
         }
-        })
+        });
     });
   }, false);
 
@@ -240,7 +240,7 @@ function initMap() {
   let searchRain = document.getElementById('searchRain');
   searchRain.addEventListener('click', function() {
     console.log('hi rain');
-    var input_date = document.getElementById('dateRain').value;;
+    var input_date = document.getElementById('dateRain').value;
     console.log(input_date);
 
     $(document).ready(function(updatedata) {
@@ -295,14 +295,14 @@ function initMap() {
               iconImageRain: 'images/rainfall.png',
               content: contentStringRain,
             });
-          };
+          }
         },
         // if input is incorrect (wrong format)
         error: function(data) {
           console.log("invalid datetime format");
           alert("Invalid datetime format \nCorrect format: YYYY-MM-DD[T]HH:mm:ss \n(e.g.: 2020-12-31T23:59:59)");
         }
-        })
+        });
     });
   }, false);
 
@@ -315,7 +315,7 @@ function initMap() {
       deleteMarkersRain();
     });
   }, false);
-};
+}
 
 // for current location
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
