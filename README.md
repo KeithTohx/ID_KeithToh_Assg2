@@ -57,4 +57,5 @@ Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-7d
 ### Media
 The icons used in the Google Maps were from Google Earth/Maps Icons website (http://kml4earth.appspot.com/icons.html#shapes).
 ### Acknowledgements
-I received inspiration for Feature 7 (Light & Dark Modes) from various Smartphone Operating Systems offering both Light Mode and Dark Mode appearances.
+* I received inspiration for Feature 7 (Light & Dark Modes) from various Smartphone Operating Systems offering both Light Mode and Dark Mode appearances.
+* The codes on User Current Location were referenced from [Google Maps Platform Documentation](https://developers.google.com/maps/documentation/javascript/geolocation) Geolocation tutorial.

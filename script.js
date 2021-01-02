@@ -11,7 +11,7 @@ function initMap() {
   // new map
   var map = new google.maps.Map(document.getElementById('map'), options);
 
-  // User current location
+  // User current location (from Google Maps Platform Documentation)
   infoWindow = new google.maps.InfoWindow();
   const locationButton = document.createElement("button");
   locationButton.textContent = "Pan to Current Location";
