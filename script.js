@@ -121,18 +121,16 @@ function initMap() {
         // crossDomain: true,
         //@data returning JSON data
         success: function(data) {
-          console.log(data);
+          console.log("success traffic");
           $("#details").before('<p id="traffic" class="title"><b>Traffic Details</b></p>');
           
           for (var i=0; i<(data.items[0].cameras).length; i++)
           {
             var camId = data.items[0].cameras[i].camera_id
-            console.log("Camera ID: " + camId);
             var datalatTraf = data.items[0].cameras[i].location.latitude;
             var datalngTraf = data.items[0].cameras[i].location.longitude;
             var dataTSTraf = new Date(data.items[0].cameras[i].timestamp);
             var image = data.items[0].cameras[i].image;
-            console.log(image);
 
             var div = document.createElement("div");
             div.id = "info";
@@ -177,14 +175,12 @@ function initMap() {
               iconImageTraf: 'images/camera.png',
               content: contentStringTraf
             });
-
           };
-
         },
         // if input is incorrect (wrong format)
         error: function(data) {
           console.log("invalid datetime format");
-          alert("Invalid datetime format \nCorrect format: YYYY-MM-DD[T]HH:mm:ss");
+          alert("Invalid datetime format \nCorrect format: YYYY-MM-DD[T]HH:mm:ss \n(e.g.: 2020-12-31T23:59:59)");
         }
         })
     });
@@ -268,7 +264,7 @@ function initMap() {
         // crossDomain: true,
         //@data returning JSON data
         success: function(data) {
-          console.log(data);
+          console.log("success rain");
           
           var dataTSRain = new Date(data.items[0].timestamp);
           $("#map").after('<p id="rain" class="title"><b>Weather Time Stamp: </b>' + dataTSRain + '</p>');
@@ -276,7 +272,6 @@ function initMap() {
           for (var i=0; i<(data.metadata.stations).length; i++)
           {
             var deviceId = data.metadata.stations[i].device_id;
-            console.log("Device ID: " + deviceId);
             var datalatRain = data.metadata.stations[i].location.latitude;
             var datalngRain = data.metadata.stations[i].location.longitude;
             var dataReadingUnit = data.metadata.reading_unit;
@@ -300,14 +295,12 @@ function initMap() {
               iconImageRain: 'images/rainfall.png',
               content: contentStringRain,
             });
-
           };
-
         },
         // if input is incorrect (wrong format)
         error: function(data) {
           console.log("invalid datetime format");
-          alert("Invalid datetime format \nCorrect format: YYYY-MM-DD[T]HH:mm:ss");
+          alert("Invalid datetime format \nCorrect format: YYYY-MM-DD[T]HH:mm:ss \n(e.g.: 2020-12-31T23:59:59)");
         }
         })
     });
