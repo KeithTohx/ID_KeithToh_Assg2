@@ -54,7 +54,6 @@ function initMap() {
     }
   });
 
-
   // SG TRAFFIC IMAGES
   // Adds a marker to the map and push to the array
   function addMarkerTraf(props){
@@ -201,7 +200,6 @@ function initMap() {
       deleteMarkersTraf();
     });
   }, false);
-
 
   // SG WEATHER - RAINFALL
   // Adds a marker to the map and push to the array
