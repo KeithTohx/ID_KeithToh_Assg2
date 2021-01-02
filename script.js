@@ -334,3 +334,42 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   );
   infoWindow.open(map);
 }
+
+// switch between light & dark modes
+$(document).ready(function () {
+  $(".special").click(function () {
+    if ($(this).hasClass('light')) {
+      // dark mode
+      $(this).attr('class', 'nav-link dark');
+      $("a.dark").text("Switch to Light Mode");
+      $("body").css({
+        'background-color' : '#35363b'
+      });
+      $("nav, footer").css({
+        'background-color' : '#24252a'
+      });
+      $("a.navbar-brand, a.nav-link, a.dropdown-item, footer a, p, label").css({
+        'color' : '#edf0f1'
+      });
+      $("div.dropdown-menu").css({
+        'background-color' : '#404146'
+      });
+    } else {
+      // light mode
+      $(this).attr('class', 'nav-link light');
+      $("a.light").text("Switch to Dark Mode");
+      $("nav, footer").css({
+        'background-color' : '#edf0f1'
+      });
+      $("a.nav-link").css({
+        'color' : 'rgba(0,0,0,.5)'
+      });
+      $("a.navbar-brand, a.dropdown-item, footer a, p, label").css({
+        'color' : 'black'
+      });
+      $("body, div.dropdown-menu").css({
+        'background-color' : 'white'
+      });
+    }
+  });
+});
