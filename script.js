@@ -342,6 +342,7 @@ $(document).ready(function () {
       // dark mode
       $(this).attr('class', 'nav-link special dark');
       $("a.dark").text("Switch to Light Mode");
+      $("nav.navbar").attr('class', 'navbar navbar-expand-lg navbar-dark');
       $("body").css({
         'background-color' : '#35363b'
       });
@@ -351,14 +352,18 @@ $(document).ready(function () {
       $("a.navbar-brand, a.nav-link, a.dropdown-item, footer a, p, label").css({
         'color' : '#edf0f1'
       });
-      $("div.dropdown-menu").css({
+      $("div.dropdown-menu, p#traffic.title, div#infoDone, p#rain.title").css({
         'background-color' : '#404146'
+      });
+      $("button.navbar-toggler").css({
+        'border-color' : '#edf0f1'
       });
     } else {
       // light mode
       $(this).attr('class', 'nav-link special light');
+      $("nav.navbar").attr('class', 'navbar navbar-expand-lg navbar-light');
       $("a.light").text("Switch to Dark Mode");
-      $("nav, footer").css({
+      $("nav, footer, p#traffic.title, div#infoDone, p#rain.title").css({
         'background-color' : '#edf0f1'
       });
       $("a.nav-link").css({
@@ -369,6 +374,9 @@ $(document).ready(function () {
       });
       $("body, div.dropdown-menu").css({
         'background-color' : 'white'
+      });
+      $("button.navbar-toggler").css({
+        'border-color' : 'rgba(0,0,0,.1)'
       });
     }
   });
