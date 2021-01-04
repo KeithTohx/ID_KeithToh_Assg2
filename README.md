@@ -72,7 +72,8 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
         * Navigation bar options will collapse into a hamburger menu button.
         * The user input section will stack vertically.
 3. __Interesting Bugs/ Problems:__
-    1. When the user search for both the traffic images and weather, and tries to remove the results of the weather first, the user will not be able to remove the results of the traffic condition unless the website is refreshed.
+    1. When the user search for both the traffic images and weather, and tries to remove the results of the weather first, the user will then not be able to remove the results of the traffic condition unless the website is being refreshed.
+    2. When the user switch the website appearance from light mode to dark mode before searching for the traffic images or rainfall value, the background colour for the traffic image details will remain in light mode colour theme when first displayed. However, this can be solved by returning to light mode and then back to dark mode again.
 4. __Validation:__
     The following websites were used to test the HTML, CSS and JS codes:
     1. HTML Code: [W3C MarkUp Validator](https://validator.w3.org/)
