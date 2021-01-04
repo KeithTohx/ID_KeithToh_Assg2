@@ -50,12 +50,18 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
         * This project uses Google Maps JavaScript API to display a Google Map on the website, as well as the exact locations of every traffic cameras and weather stations.
 
 ## Testing
-1. __Scenario - Search for Traffic/ Weather Details:__
-    1. Scroll to the top of the website/ Click on the 'Back to Top' button at the bottom of the page.
-    2. Verify that an error message about entering the datetime in the correct format appears when:
-        * the input only has the date value;
-        * the input only has the time value; and
-        * date and time entered are not in the specified format (e.g. without 'T', '-' or ':').
+1. __Scenario Testing:__
+    1. __Search for Traffic/ Weather Details:__
+        1. Scroll to the top of the website/ Click on the 'Back to Top' button at the bottom of the page.
+        2. Verify that an error message about entering the datetime in the correct format appears when:
+            * the input only has the date value;
+            * the input only has the time value; and
+            * date and time entered are not in the specified format (e.g. without 'T', '-' or ':').
+    2. __No Data Available in Database:__
+        1. Scroll to the top of the website/ Click on the 'Back to Top' button at the bottom of the page.
+        2. Enter a very recent date and time (e.g. current time) into the input box and click search.
+        3. Verify that if there is no icons shown on the Google Maps, an error message will be shown instead saying that there is "No traffic details found. Try another Date & Time." for traffic images searches or "No rainfall values found. Try another Date & Time." for rainfall value searches.
+        4. This means that the Data.Gov.sg database do not have the latest data updated into their database.
 2. __Different Screen Sizes:__
     * When viewed on a big screen (desktop):
         * Navigation bar options will all be displayed out.
