@@ -121,61 +121,68 @@ function initMap() {
         // crossDomain: true,
         //@data returning JSON data
         success: function(data) {
-          console.log("success traffic");
-          $("#details").before('<p id="traffic" class="title"><b>Traffic Details</b></p>');
-          
-          for (var i=0; i<(data.items[0].cameras).length; i++)
+          if ((data.items[0].cameras) == undefined)
           {
-            var camId = data.items[0].cameras[i].camera_id;
-            var datalatTraf = data.items[0].cameras[i].location.latitude;
-            var datalngTraf = data.items[0].cameras[i].location.longitude;
-            var dataTSTraf = new Date(data.items[0].cameras[i].timestamp);
-            var image = data.items[0].cameras[i].image;
-
-            var div = document.createElement("div");
-            div.id = "info";
-            var src = document.getElementById("details");
-            src.appendChild(div);
-
-            $("#info").css({
-              'background-color' : '#edf0f1',
-              'padding-bottom' : '15px',
-              'margin-bottom' : '10px'
-            });
-              
-            $("#info").append('<p class="text"><b>Camera ID: </b>' + camId + "</p>");
-            $("#info").append('<p class="text"><b>Latitude: </b>' + datalatTraf + "</p>");
-            $("#info").append('<p class="text"><b>Longitude: </b>' + datalngTraf + "</p>");
-            $("#info").append('<p class="text"><b>Time Stamp: </b>' + dataTSTraf + "</p>");
-
-            var img = document.createElement("img");
-            img.src = image;
-            img.className = "img-fluid";
-            img.width = 320;
-            var src = document.getElementById("info");
-            $("#info").append('<p class="text"><b>Traffic Image: </b></p>');
-            src.appendChild(img);
-
-            document.getElementById("info").id = "infoDone";
-
-            var contentStringTraf =
-            '<div id="content">' +
-            '<div id="siteNotice">' +
-            "</div>" +
-            '<div id="bodyContent">' +
-            "<p>Cam ID: " + camId + 
-            "<p>Latitude: " + datalatTraf + 
-            "<p>Longitude: " + datalngTraf + "</p>" +
-            "</div>" +
-            "</div>";
-
-            // call function to add marker on map
-            addMarkerTraf({
-              coords:{lat: datalatTraf, lng: datalngTraf},
-              iconImageTraf: 'images/camera.png',
-              content: contentStringTraf
-            });
+            console.log("No Traffic data found");
+            $("#details").before('<p id="traffic" class="title"><b>No traffic details found. Try another Date & Time.</b></p>');
           }
+          else {
+            $("#details").before('<p id="traffic" class="title"><b>Traffic Details</b></p>');
+
+            for (var i=0; i<(data.items[0].cameras).length; i++)
+            {
+              var camId = data.items[0].cameras[i].camera_id;
+              var datalatTraf = data.items[0].cameras[i].location.latitude;
+              var datalngTraf = data.items[0].cameras[i].location.longitude;
+              var dataTSTraf = new Date(data.items[0].cameras[i].timestamp);
+              var image = data.items[0].cameras[i].image;
+
+              var div = document.createElement("div");
+              div.id = "info";
+              var src = document.getElementById("details");
+              src.appendChild(div);
+
+              $("#info").css({
+                'background-color' : '#edf0f1',
+                'padding-bottom' : '15px',
+                'margin-bottom' : '10px'
+              });
+                
+              $("#info").append('<p class="text"><b>Camera ID: </b>' + camId + "</p>");
+              $("#info").append('<p class="text"><b>Latitude: </b>' + datalatTraf + "</p>");
+              $("#info").append('<p class="text"><b>Longitude: </b>' + datalngTraf + "</p>");
+              $("#info").append('<p class="text"><b>Time Stamp: </b>' + dataTSTraf + "</p>");
+
+              var img = document.createElement("img");
+              img.src = image;
+              img.className = "img-fluid";
+              img.width = 320;
+              var src = document.getElementById("info");
+              $("#info").append('<p class="text"><b>Traffic Image: </b></p>');
+              src.appendChild(img);
+
+              document.getElementById("info").id = "infoDone";
+
+              var contentStringTraf =
+              '<div id="content">' +
+              '<div id="siteNotice">' +
+              "</div>" +
+              '<div id="bodyContent">' +
+              "<p>Cam ID: " + camId + 
+              "<p>Latitude: " + datalatTraf + 
+              "<p>Longitude: " + datalngTraf + "</p>" +
+              "</div>" +
+              "</div>";
+
+              // call function to add marker on map
+              addMarkerTraf({
+                coords:{lat: datalatTraf, lng: datalngTraf},
+                iconImageTraf: 'images/camera.png',
+                content: contentStringTraf
+              });
+            }
+            console.log("success traffic");
+          };
         },
         // if input is incorrect (wrong format)
         error: function(data) {
@@ -264,38 +271,43 @@ function initMap() {
         // crossDomain: true,
         //@data returning JSON data
         success: function(data) {
-          console.log("success rain");
-          
-          var dataTSRain = new Date(data.items[0].timestamp);
-          $("#map").after('<p id="rain" class="title"><b>Weather Time Stamp: </b>' + dataTSRain + '</p>');
-
-          for (var i=0; i<(data.metadata.stations).length; i++)
-          {
-            var deviceId = data.metadata.stations[i].device_id;
-            var datalatRain = data.metadata.stations[i].location.latitude;
-            var datalngRain = data.metadata.stations[i].location.longitude;
-            var dataReadingUnit = data.metadata.reading_unit;
-            var dataValueRain = data.items[0].readings[i].value;
-
-            var contentStringRain =
-            '<div id="content">' +
-            '<div id="siteNotice">' +
-            "</div>" +
-            '<div id="bodyContent">' +
-            "<p>Device ID: " + deviceId +
-            "<p>Latitude: " + datalatRain + 
-            "<p>Longitude: " + datalngRain + 
-            "<p>Rainfall Value: " + dataValueRain + " " + dataReadingUnit + "</p>" +
-            "</div>" +
-            "</div>";
-
-            // call function to add marker on map
-            addMarkerRain({
-              coords:{lat: datalatRain, lng: datalngRain},
-              iconImageRain: 'images/rainfall.png',
-              content: contentStringRain,
-            });
+          if (data.items[0].timestamp==""){
+            console.log("No Rain data found");
+            $("#map").after('<p id="rain" class="title"><b>No rainfall values found. Try another Date & Time.</b></p>');
           }
+          else {
+            var dataTSRain = new Date(data.items[0].timestamp);
+            $("#map").after('<p id="rain" class="title"><b>Weather Time Stamp: </b>' + dataTSRain + '</p>');
+
+            for (var i=0; i<(data.metadata.stations).length; i++)
+            {
+              var deviceId = data.metadata.stations[i].device_id;
+              var datalatRain = data.metadata.stations[i].location.latitude;
+              var datalngRain = data.metadata.stations[i].location.longitude;
+              var dataReadingUnit = data.metadata.reading_unit;
+              var dataValueRain = data.items[0].readings[i].value;
+
+              var contentStringRain =
+              '<div id="content">' +
+              '<div id="siteNotice">' +
+              "</div>" +
+              '<div id="bodyContent">' +
+              "<p>Device ID: " + deviceId +
+              "<p>Latitude: " + datalatRain + 
+              "<p>Longitude: " + datalngRain + 
+              "<p>Rainfall Value: " + dataValueRain + " " + dataReadingUnit + "</p>" +
+              "</div>" +
+              "</div>";
+
+              // call function to add marker on map
+              addMarkerRain({
+                coords:{lat: datalatRain, lng: datalngRain},
+                iconImageRain: 'images/rainfall.png',
+                content: contentStringRain,
+              });
+            }
+            console.log("success rain");
+          };
         },
         // if input is incorrect (wrong format)
         error: function(data) {
