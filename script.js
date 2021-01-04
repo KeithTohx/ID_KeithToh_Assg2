@@ -342,10 +342,10 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 // switch between light & dark modes
 $(document).ready(function () {
-  $(".special").click(function () {
+  $(".mode").click(function () {
     if ($(this).hasClass('light')) {
       // dark mode
-      $(this).attr('class', 'nav-link special dark');
+      $(this).attr('class', 'nav-link mode dark');
       $("a.dark").text("Switch to Light Mode");
       $("nav.navbar").attr('class', 'navbar navbar-expand-lg navbar-dark');
       $("body").css({
@@ -365,7 +365,7 @@ $(document).ready(function () {
       });
     } else {
       // light mode
-      $(this).attr('class', 'nav-link special light');
+      $(this).attr('class', 'nav-link mode light');
       $("nav.navbar").attr('class', 'navbar navbar-expand-lg navbar-light');
       $("a.light").text("Switch to Dark Mode");
       $("nav, footer, p#traffic.title, div#infoDone, p#rain.title, div#legend.title").css({
@@ -383,6 +383,16 @@ $(document).ready(function () {
       $("button.navbar-toggler").css({
         'border-color' : 'rgba(0,0,0,.1)'
       });
+    }
+  });
+});
+
+$(document).ready(function () {
+  $(".special").click(function () {
+    if ($(this).hasClass('red')) {
+      $(this).attr('class', 'green');
+    } else {
+      $(this).attr('class', 'red');
     }
   });
 });
