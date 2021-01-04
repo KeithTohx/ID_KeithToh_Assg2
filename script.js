@@ -273,11 +273,11 @@ function initMap() {
         success: function(data) {
           if (data.items[0].timestamp==""){
             console.log("No Rain data found");
-            $("#map").after('<p id="rain" class="title"><b>No rainfall values found. Try another Date & Time.</b></p>');
+            $("#legend").after('<p id="rain" class="title"><b>No rainfall values found. Try another Date & Time.</b></p>');
           }
           else {
             var dataTSRain = new Date(data.items[0].timestamp);
-            $("#map").after('<p id="rain" class="title"><b>Weather Time Stamp: </b>' + dataTSRain + '</p>');
+            $("#legend").after('<p id="rain" class="title"><b>Weather Time Stamp: </b>' + dataTSRain + '</p>');
 
             for (var i=0; i<(data.metadata.stations).length; i++)
             {
