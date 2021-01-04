@@ -53,9 +53,12 @@ Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-7d
         * The user input section will stack vertically.
 3. Interesting Bugs/ Problems:
     1. When the user search for both the traffic images and weather, and tries to remove the results of the weather first, the user will not be able to remove the results of the traffic condition unless the website is refreshed.
+
 ## Credits
-### Media
-The icons used in the Google Maps were from Google Earth/Maps Icons website (http://kml4earth.appspot.com/icons.html#shapes).
+### Media/ Content
+* Icons used in the Google Maps: [Google Earth/Maps Icons](http://kml4earth.appspot.com/icons.html#shapes)
+* Text Fonts used in website: [Google Fonts](https://fonts.google.com/)
+* Navigation Bar: [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/components/navbar/)
+* Codes for User Current Location on Google Maps: [Google Maps Platform Documentation](https://developers.google.com/maps/documentation/javascript/geolocation)
 ### Acknowledgements
 * I received inspiration for Feature 7 (Light & Dark Modes) from various Smartphone Operating Systems offering both Light Mode and Dark Mode appearances.
-* The codes on User Current Location were referenced from [Google Maps Platform Documentation](https://developers.google.com/maps/documentation/javascript/geolocation) Geolocation tutorial.
