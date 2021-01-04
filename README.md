@@ -2,6 +2,8 @@
 #### Traffic & Weather Condition in Singapore
 This Project allows users to check the traffic condition in Singapore based on traffic images displayed, as well as the rainfall value at different parts of Singapore.
 
+Link to GitHub Page: https://keithtohx.github.io/ID_KeithToh_Assg2/
+
 ## Design Process
 This website is intended for drivers, road users in general and those researching about traffic conditions and rainfall in Singapore. They will be able to know if the roads they would like to travel on is congested, and plan their journey accordingly if they wish to avoid the congestion. Users will also be able to know if a place is/was raining at certain dates and timings. All the users need to do is to enter the date and time which they want to search into the input boxes. This website will then show a map with all the location of traffic cameras and weather detector stations in operation, as well as the images taken by the cameras and the rainfall values.
 
@@ -53,6 +55,11 @@ Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-7d
         * The user input section will stack vertically.
 3. Interesting Bugs/ Problems:
     1. When the user search for both the traffic images and weather, and tries to remove the results of the weather first, the user will not be able to remove the results of the traffic condition unless the website is refreshed.
+4. Validation:
+    The following websites were used to test the HTML, CSS and JS codes:
+    1. HTML Code: [W3C MarkUp Validator](https://validator.w3.org/)
+    2. CSS Code: [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
+    3. Javascript: [JSHint](https://jshint.com/)
 
 ## Credits
 ### Media/ Content
