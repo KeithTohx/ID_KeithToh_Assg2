@@ -78,4 +78,4 @@ Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-7d
 * Navigation Bar: [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/components/navbar/)
 * Codes for User Current Location on Google Maps: [Google Maps Platform Documentation](https://developers.google.com/maps/documentation/javascript/geolocation)
 ### Acknowledgements
-* I received inspiration for Feature 7 (Light & Dark Modes) from various Smartphone Operating Systems offering both Light Mode and Dark Mode appearances.
+* I received inspiration for Feature 8 (Light & Dark Modes) from various Smartphone Operating Systems (e.g. Apple iOS) which offers both Light Mode and Dark Mode appearances.
