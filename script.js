@@ -124,10 +124,10 @@ function initMap() {
           if ((data.items[0].cameras) == undefined)
           {
             console.log("No Traffic data found");
-            $("#details").before('<p id="traffic" class="title"><b>No traffic details found. Try another Date & Time.</b></p>');
+            $("#details").before('<p id="traffic" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>No traffic details found. Try another Date & Time.</b></p>');
           }
           else {
-            $("#details").before('<p id="traffic" class="title"><b>Traffic Details</b></p>');
+            $("#details").before('<p id="traffic" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>Traffic Details</b></p>');
 
             for (var i=0; i<(data.items[0].cameras).length; i++)
             {
@@ -145,6 +145,7 @@ function initMap() {
               $("#info").css({
                 'background-color' : '#edf0f1',
                 'padding-bottom' : '15px',
+                'padding-top' : '10px',
                 'margin-bottom' : '10px'
               });
                 
@@ -273,11 +274,11 @@ function initMap() {
         success: function(data) {
           if (data.items[0].timestamp==""){
             console.log("No Rain data found");
-            $("#legend").after('<p id="rain" class="title"><b>No rainfall values found. Try another Date & Time.</b></p>');
+            $("#legend").after('<p id="rain" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>No rainfall values found. Try another Date & Time.</b></p>');
           }
           else {
             var dataTSRain = new Date(data.items[0].timestamp);
-            $("#legend").after('<p id="rain" class="title"><b>Weather Time Stamp: </b>' + dataTSRain + '</p>');
+            $("#legend").after('<p id="rain" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>Weather Time Stamp: </b>' + dataTSRain + '</p>');
 
             for (var i=0; i<(data.metadata.stations).length; i++)
             {
