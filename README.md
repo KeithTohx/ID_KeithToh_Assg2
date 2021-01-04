@@ -54,8 +54,8 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
     1. __Search for Traffic/ Weather Details:__
         1. Scroll to the top of the website/ Click on the 'Back to Top' button at the bottom of the page.
         2. Verify that an error message about entering the datetime in the correct format appears when:
-            * the input only has the date value;
-            * the input only has the time value; and
+            * the input only has the date value (e.g. 2020-12-31);
+            * the input only has the time value (e.g. 23:59:59); and
             * date and time entered are not in the specified format (e.g. without 'T', '-' or ':').
         3. Try entering the Date and Time in the correct format and verify that there are icons appearing on the Google Map after clicking on the "Search" button. This means that there are data retrieved. 
     2. __No Data Available in Database:__
@@ -73,7 +73,7 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
         * The user input section will stack vertically.
 3. __Interesting Bugs/ Problems:__
     1. When the user search for both the traffic images and weather, and tries to remove the results of the weather first, the user will then not be able to remove the results of the traffic condition unless the website is being refreshed.
-    2. When the user switch the website appearance from light mode to dark mode before searching for the traffic images or rainfall value, the background colour of the traffic and weather details will be displayed in light mode colour theme. However, this can be solved by returning to light mode and then back to dark mode again.
+    2. When the user switch the website appearance from light mode to dark mode before searching for the traffic images or rainfall value, the background colour of the traffic and weather details will be displayed in light mode colour theme. However, this can be solved by returning to light mode and then back to dark mode.
 4. __Validation:__
     The following websites were used to test the HTML, CSS and JS codes:
     1. HTML Code: [W3C MarkUp Validator](https://validator.w3.org/)
