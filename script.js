@@ -36,7 +36,7 @@ function initMap() {
             map: map
           });
           let infoWindowUser = new google.maps.InfoWindow({
-            content: "<b>Your Current Location</b>"
+            content: "<p style='font-size: 16px; margin-bottom: 0%;'><b>Your Current Location</b></p>"
           });
         
           markerUser.addListener('click', function(){
@@ -168,9 +168,9 @@ function initMap() {
               '<div id="siteNotice">' +
               "</div>" +
               '<div id="bodyContent">' +
-              "<p>Cam ID: " + camId + 
-              "<p>Latitude: " + datalatTraf + 
-              "<p>Longitude: " + datalngTraf + "</p>" +
+              "<p style='font-size: 14px;'>Cam ID: " + camId + 
+              "<p style='font-size: 14px;'>Latitude: " + datalatTraf + 
+              "<p style='font-size: 14px; margin-bottom: 0%;'>Longitude: " + datalngTraf + "</p>" +
               "</div>" +
               "</div>";
 
@@ -292,10 +292,10 @@ function initMap() {
               '<div id="siteNotice">' +
               "</div>" +
               '<div id="bodyContent">' +
-              "<p>Device ID: " + deviceId +
-              "<p>Latitude: " + datalatRain + 
-              "<p>Longitude: " + datalngRain + 
-              "<p>Rainfall Value: " + dataValueRain + " " + dataReadingUnit + "</p>" +
+              "<p style='font-size: 14px;'>Device ID: " + deviceId +
+              "<p style='font-size: 14px;'>Latitude: " + datalatRain + 
+              "<p style='font-size: 14px;'>Longitude: " + datalngRain + 
+              "<p style='font-size: 14px; margin-bottom: 0%;'>Rainfall Value: " + dataValueRain + " " + dataReadingUnit + "</p>" +
               "</div>" +
               "</div>";
 
@@ -346,7 +346,7 @@ $(document).ready(function () {
     if ($(this).hasClass('light')) {
       // dark mode
       $(this).attr('class', 'nav-link mode dark');
-      $("a.dark").text("Switch to Light Mode");
+      $("a.dark").html("<i>Switch to Light Mode</i>");
       $("nav.navbar").attr('class', 'navbar navbar-expand-lg navbar-dark');
       $("body").css({
         'background-color' : '#35363b'
@@ -354,10 +354,10 @@ $(document).ready(function () {
       $("nav, footer").css({
         'background-color' : '#24252a'
       });
-      $("a.navbar-brand, a.nav-link, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, p#traffic.title, div#infoDone p, div#legend.title p").css({
+      $("a.navbar-brand, a.nav-link, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, p#traffic.title, div#infoDone p, div#legend.title p, div#intro p").css({
         'color' : '#edf0f1'
       });
-      $("div.dropdown-menu, p#traffic.title, div#infoDone, p#rain.title, div#legend.title").css({
+      $("div.dropdown-menu, p#traffic.title, div#infoDone, p#rain.title, div#legend.title, div#intro").css({
         'background-color' : '#404146'
       });
       $("button.navbar-toggler").css({
@@ -367,14 +367,14 @@ $(document).ready(function () {
       // light mode
       $(this).attr('class', 'nav-link mode light');
       $("nav.navbar").attr('class', 'navbar navbar-expand-lg navbar-light');
-      $("a.light").text("Switch to Dark Mode");
-      $("nav, footer, p#traffic.title, div#infoDone, p#rain.title, div#legend.title").css({
+      $("a.light").html("<i>Switch to Dark Mode</i>");
+      $("nav, footer, p#traffic.title, div#infoDone, p#rain.title, div#legend.title, div#intro").css({
         'background-color' : '#edf0f1'
       });
       $("a.nav-link").css({
         'color' : 'rgba(0,0,0,.5)'
       });
-      $("a.navbar-brand, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, p#traffic.title, div#infoDone p, div#legend.title p").css({
+      $("a.navbar-brand, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, p#traffic.title, div#infoDone p, div#legend.title p, div#intro p").css({
         'color' : 'black'
       });
       $("body, div.dropdown-menu").css({
@@ -388,11 +388,16 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  $(".special").click(function () {
-    if ($(this).hasClass('red')) {
-      $(this).attr('class', 'green');
+  $("div#intro p").hide();
+  $(".intro").click(function () {
+    if ($(this).hasClass('hide')) {
+      $(this).attr('class', 'dropdown-item intro show');
+      $("a.show").html("<i>Hide Introduction</i>");
+      $('div#intro p').show();       
     } else {
-      $(this).attr('class', 'red');
+      $(this).attr('class', 'dropdown-item intro hide');
+      $("a.hide").html("<i>Show Introduction</i>");
+      $("div#intro p").hide();
     }
   });
 });
