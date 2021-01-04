@@ -342,10 +342,10 @@ $(document).ready(function () {
       $("nav, footer").css({
         'background-color' : '#24252a'
       });
-      $("a.navbar-brand, a.nav-link, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, p#traffic.title, div#infoDone p").css({
+      $("a.navbar-brand, a.nav-link, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, p#traffic.title, div#infoDone p, div#legend.title p").css({
         'color' : '#edf0f1'
       });
-      $("div.dropdown-menu, p#traffic.title, div#infoDone, p#rain.title").css({
+      $("div.dropdown-menu, p#traffic.title, div#infoDone, p#rain.title, div#legend.title").css({
         'background-color' : '#404146'
       });
       $("button.navbar-toggler").css({
@@ -356,13 +356,13 @@ $(document).ready(function () {
       $(this).attr('class', 'nav-link special light');
       $("nav.navbar").attr('class', 'navbar navbar-expand-lg navbar-light');
       $("a.light").text("Switch to Dark Mode");
-      $("nav, footer, p#traffic.title, div#infoDone, p#rain.title").css({
+      $("nav, footer, p#traffic.title, div#infoDone, p#rain.title, div#legend.title").css({
         'background-color' : '#edf0f1'
       });
       $("a.nav-link").css({
         'color' : 'rgba(0,0,0,.5)'
       });
-      $("a.navbar-brand, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, p#traffic.title, div#infoDone p").css({
+      $("a.navbar-brand, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, p#traffic.title, div#infoDone p, div#legend.title p").css({
         'color' : 'black'
       });
       $("body, div.dropdown-menu").css({
