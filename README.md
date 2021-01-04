@@ -57,11 +57,13 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
             * the input only has the date value;
             * the input only has the time value; and
             * date and time entered are not in the specified format (e.g. without 'T', '-' or ':').
+        3. Try entering the Date and Time in the correct format and verify that there are icons appearing on the Google Map after clicking on the "Search" button. This means that there are data retrieved. 
     2. __No Data Available in Database:__
         1. Scroll to the top of the website/ Click on the 'Back to Top' button at the bottom of the page.
         2. Enter a very recent date and time (e.g. current time) into the input box and click search.
         3. Verify that if there is no icons shown on the Google Maps, an error message will be shown instead saying that there is "No traffic details found. Try another Date & Time." for traffic images searches or "No rainfall values found. Try another Date & Time." for rainfall value searches.
         4. This means that the Data.Gov.sg database do not have the latest data updated into their database.
+        5. Try entering a date which is at least a week ago from the current date and verify that there are icons appearing on the Google Map after clicking on the "Search" button. This means that there are data retrieved. 
 2. __Different Screen Sizes:__
     * When viewed on a big screen (desktop):
         * Navigation bar options will all be displayed out.
