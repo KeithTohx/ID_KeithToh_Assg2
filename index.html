@@ -25,17 +25,9 @@
                 Introduction
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> 
-              <a class="dropdown-item">Welcome! This application allows you to</a>
-              <a class="dropdown-item">view traffic images captured from various</a>
-              <a class="dropdown-item">parts of Singapore, and check for the rainfall</a> 
-              <a class="dropdown-item">values across Singapore.</a>
+              <a class="dropdown-item"><b>Welcome!</b></a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item">Click on the icons on the map to view the</a>
-              <a class="dropdown-item">details, and scroll down to view the traffic</a>
-              <a class="dropdown-item">images after entering the date and time</a>
-              <a class="dropdown-item">and clicking on the 'Search' button. Clicking</a>
-              <a class="dropdown-item">on the 'Clear Results' button will remove</a>
-              <a class="dropdown-item">the search results.</a>
+              <a href="#" class="dropdown-item intro hide"><i>Show Introduction</i></a>
             </div>
           </li>
           <!-- online service menu -->
@@ -73,14 +65,23 @@
           </li>
           <!-- light/dark mode -->
           <li class="nav-item">
-            <a href="#" class="nav-link mode light">Switch to Dark Mode</a>
+            <a href="#" class="nav-link mode light"><i>Switch to Dark Mode</i></a>
           </li>
         </ul>
       </div>
     </nav>
 
     <!-- section1: user inputs -->
-    <div class="container"> 
+    <div class="container" style="padding-bottom: 20px; margin-top: 20px;"> 
+      <div id="intro" class="title"> <!-- for introduction -->
+        <p style="padding-top: 10px; margin-left: 25px; margin-right: 25px;"><b>Introduction</b></p>
+        <p style="margin-left: 25px; margin-right: 25px;">This application allows you to view traffic images captured from various
+        parts of Singapore, and check for the rainfall values across Singapore on certain dates and timings.</p>
+        <p style="padding-bottom: 16px; margin-left: 25px; margin-right: 25px;">After entering the date and time and clicking on the "Search"
+        button, icons will appear on the Google Map. Click on the icons on the map to view the details, 
+        and scroll down to view the traffic images (only when searched for Traffic condition). 
+        Clicking on the "Clear Results" button will remove the search results.</p>
+      </div> 
       <div class="row">
         <div class="col-sm" id="userTraf">
           <p style="margin-bottom: 0%; margin-top: 10px;"><b>Singapore Traffic</b></p>
