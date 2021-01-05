@@ -37,9 +37,9 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
     * Users can search for the rainfall values in Singapore by entering the date and time into the input box.
     * Output includes Location of Weather Stations on Map, Device ID, Coordinates of Detectors and Timestamp.
 * __Feature 7: Back to Top of Website__
-    * allows Users to be brought back to the Top of the Website by clicking on the "Back to Top" link at the bottom of the page.
+    * Brings Users back to the Top of the Website by clicking on the "Back to Top" link at the bottom of the page.
 * __Feature 8: Light/ Dark Modes Appearances__
-    * allows Users to switch the colour mode of the website between light and dark modes to have a different viewing experience by clicking on the "Switch to Light/Dark Mode" link on the navigation bar. 
+    * Allows Users to switch the colour theme of the website between light and dark modes to have a different viewing experience by clicking on the "Switch to Light/Dark Mode" link on the navigation bar. 
 
 ## Technologies Used
 * [JQuery](https://jquery.com)
