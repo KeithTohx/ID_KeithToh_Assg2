@@ -389,6 +389,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  $("div#intro p").hide();
   $(".intro").click(function () {
     if ($(this).hasClass('hide')) {
       $(this).attr('class', 'dropdown-item intro show');
