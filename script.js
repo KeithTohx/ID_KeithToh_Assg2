@@ -96,13 +96,9 @@ function initMap() {
   // TRAFFIC API SECTION
   let searchTraf = document.getElementById('searchTraf');
   searchTraf.addEventListener('click', function() {
-    console.log('hi traffic');
     var input_date = document.getElementById('dateTraf').value;
-    console.log(input_date);
 
     $(document).ready(function(updatedata) {
-      //@params settings
-      console.log("ready traffic");
       var params = {
         // YYYY-MM-DD[T]HH:mm:ss (SGT)
         "date_time": input_date
@@ -118,13 +114,10 @@ function initMap() {
         },
       
         data: { "date_time": input_date },
-        // crossDomain: true,
-        //@data returning JSON data
         success: function(data) {
           if ((data.items[0].cameras) == undefined)
           {
             // display error message when no traffic data found
-            console.log("No Traffic data found");
             $("#details").before('<p id="traffic" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>No traffic details found. Try another Date & Time.</b></p>');
           }
           else {
@@ -185,12 +178,10 @@ function initMap() {
                 content: contentStringTraf
               });
             }
-            console.log("success traffic");
           };
         },
         // if input is incorrect (wrong format)
         error: function(data) {
-          console.log("invalid datetime format");
           alert("Invalid datetime format \nCorrect format: YYYY-MM-DD[T]HH:mm:ss \n(e.g.: 2020-12-31T23:59:59)");
         }
         });
@@ -200,8 +191,6 @@ function initMap() {
   // removes traffic details
   let emtpyTraf = document.getElementById('emtpyTraf');
   emtpyTraf.addEventListener('click', function() {
-    console.log('bye traffic');
-
     $(document).ready(function(updatedata) {
       $('#traffic').remove();
       $('#details').empty();
@@ -251,13 +240,9 @@ function initMap() {
   // WEATHER API SECTION
   let searchRain = document.getElementById('searchRain');
   searchRain.addEventListener('click', function() {
-    console.log('hi rain');
     var input_date = document.getElementById('dateRain').value;
-    console.log(input_date);
 
     $(document).ready(function(updatedata) {
-      //@params settings
-      console.log("ready rain");
       var params = {
         // YYYY-MM-DD[T]HH:mm:ss (SGT)
         "date_time": input_date
@@ -273,12 +258,9 @@ function initMap() {
         },
       
         data: { "date_time": input_date },
-        // crossDomain: true,
-        //@data returning JSON data
         success: function(data) {
           if (data.items[0].timestamp==""){
             // display error message when no weather data found
-            console.log("No Rain data found");
             $("#legend").after('<p id="rain" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>No rainfall values found. Try another Date & Time.</b></p>');
           }
           else {
@@ -313,12 +295,10 @@ function initMap() {
                 content: contentStringRain,
               });
             }
-            console.log("success rain");
           };
         },
         // if input is incorrect (wrong format)
         error: function(data) {
-          console.log("invalid datetime format");
           alert("Invalid datetime format \nCorrect format: YYYY-MM-DD[T]HH:mm:ss \n(e.g.: 2020-12-31T23:59:59)");
         }
         });
@@ -328,8 +308,6 @@ function initMap() {
   // removes rainfall details
   let emtpyRain = document.getElementById('emtpyRain');
   emtpyRain.addEventListener('click', function() {
-    console.log('bye rain');
-
     $(document).ready(function(updatedata) {
       $('#rain').remove();
       deleteMarkersRain();
