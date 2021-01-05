@@ -81,7 +81,8 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
     The following websites were used to test the HTML, CSS and JS codes:
     1. HTML Code: [W3C MarkUp Validator](https://validator.w3.org/)
     2. CSS Code: [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
-    3. Javascript: [JSHint](https://jshint.com/)
+    3. Javascript Code: [JSHint](https://jshint.com/)
+5. __Manual User Testing:__ [Documentation on Google Sheets](https://docs.google.com/spreadsheets/d/1ZACe1F2ptL2ZhsXDKxCKH8pRRk56mJ1204Lcjidpfog/edit?usp=sharing)
 
 ## Credits
 ### Media/ Content
