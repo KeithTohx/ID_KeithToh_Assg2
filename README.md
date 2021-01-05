@@ -15,9 +15,9 @@ User Stories:
 * As a researcher, I want to check if certain places rained at specific timings, so that I can determine the trend of rainfall in Singapore.
 
 __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-7d3748a085d5-4359/__
-The Wireframe for this project was amended later in the design process to better reflect changes to the inital plan and include new features.
+* The Wireframe for this project was amended later in the design process to better reflect changes to the inital plan/design and include several new features.
 ![Wireframe Image](images/wireframe.png)
-
+  
 ## Features
 ### Existing Features 
 * __Feature 1: Collapsible Hamburger Menu__
