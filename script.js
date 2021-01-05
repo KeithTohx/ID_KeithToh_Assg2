@@ -123,6 +123,7 @@ function initMap() {
         success: function(data) {
           if ((data.items[0].cameras) == undefined)
           {
+            // display error message when no traffic data found
             console.log("No Traffic data found");
             $("#details").before('<p id="traffic" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>No traffic details found. Try another Date & Time.</b></p>');
           }
@@ -154,6 +155,7 @@ function initMap() {
               $("#info").append('<p class="text"><b>Longitude: </b>' + datalngTraf + "</p>");
               $("#info").append('<p class="text"><b>Time Stamp: </b>' + dataTSTraf + "</p>");
 
+              // insert traffic image
               var img = document.createElement("img");
               img.src = image;
               img.className = "img-fluid";
@@ -164,6 +166,7 @@ function initMap() {
 
               document.getElementById("info").id = "infoDone";
 
+              // traffic info window content
               var contentStringTraf =
               '<div id="content">' +
               '<div id="siteNotice">' +
@@ -194,6 +197,7 @@ function initMap() {
     });
   }, false);
 
+  // removes traffic details
   let emtpyTraf = document.getElementById('emtpyTraf');
   emtpyTraf.addEventListener('click', function() {
     console.log('bye traffic');
@@ -273,6 +277,7 @@ function initMap() {
         //@data returning JSON data
         success: function(data) {
           if (data.items[0].timestamp==""){
+            // display error message when no weather data found
             console.log("No Rain data found");
             $("#legend").after('<p id="rain" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>No rainfall values found. Try another Date & Time.</b></p>');
           }
@@ -288,6 +293,7 @@ function initMap() {
               var dataReadingUnit = data.metadata.reading_unit;
               var dataValueRain = data.items[0].readings[i].value;
 
+              // rainfall info window content 
               var contentStringRain =
               '<div id="content">' +
               '<div id="siteNotice">' +
@@ -319,6 +325,7 @@ function initMap() {
     });
   }, false);
 
+  // removes rainfall details
   let emtpyRain = document.getElementById('emtpyRain');
   emtpyRain.addEventListener('click', function() {
     console.log('bye rain');
@@ -330,7 +337,7 @@ function initMap() {
   }, false);
 }
 
-// for current location
+// for user current location
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(
@@ -341,7 +348,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.open(map);
 }
 
-// switch between light & dark modes
+// to switch between light & dark modes (website appearance)
 $(document).ready(function () {
   $(".mode").click(function () {
     if ($(this).hasClass('light')) {
@@ -388,6 +395,7 @@ $(document).ready(function () {
   });
 });
 
+// to show/hide Introduction
 $(document).ready(function () {
   $("div#intro p").hide();
   $(".intro").click(function () {
