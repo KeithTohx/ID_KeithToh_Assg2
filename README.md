@@ -8,7 +8,7 @@ __Link to GitHub Page: https://keithtohx.github.io/ID_KeithToh_Assg2/__
 ## Design Process
 This website is intended for drivers, road users in general and those researching about traffic conditions and rainfall in Singapore. They will be able to know if the roads they would like to travel on is congested, and plan their journey accordingly if they wish to avoid the congestion. Users will also be able to know if a place is/was raining at certain dates and timings. All the users need to do is to enter the date and time which they want to search into the input boxes. This website will then show a map with all the location of traffic cameras and weather detector stations in operation, as well as the images taken by the cameras and the rainfall values.
 
-This website is designed to have all the content be displayed in a linear layout. In terms of colour choice, a very light grey (#edf0f1) was chosen for the background colour of most content except the user input section, and white for the website background for light mode appearance. For dark mode appearance, different tones of grey were chosen to replace the background colours of light mode. 
+This website is designed to have all the content displayed in a linear layout. In terms of colour choice, for light mode appearance, a very light grey (#edf0f1) was chosen for the background colour of most content except the user input section, and white for the website background. As for dark mode appearance, different tones of grey were chosen to replace the background colours of light mode. 
 
 User Stories:
 * As a driver, I want to check if a certain section of the road is congested, so that I can better plan my journey to avoid reaching my destination late.
