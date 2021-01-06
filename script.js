@@ -33,6 +33,7 @@ function initMap() {
           // create user marker on map
           var markerUser = new google.maps.Marker({
             position: pos,
+            animation:google.maps.Animation.DROP,
             map: map
           });
           let infoWindowUser = new google.maps.InfoWindow({
