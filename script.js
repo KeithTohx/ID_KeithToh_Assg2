@@ -145,8 +145,6 @@ function initMap() {
               });
 
               $("#info").append('<p class="text"><b>Camera ID: </b>' + camId + "</p>");
-              $("#info").append('<p class="text"><b>Latitude: </b>' + datalatTraf + "</p>");
-              $("#info").append('<p class="text"><b>Longitude: </b>' + datalngTraf + "</p>");
               $("#info").append('<p class="text"><b>Time Stamp: </b>' + dataTSTraf + "</p>");
 
               // insert traffic image
