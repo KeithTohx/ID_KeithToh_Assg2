@@ -42,6 +42,9 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
     * Brings Users back to the Top of the Website by clicking on the "Back to Top" link at the bottom of the page.
 * __Feature 8: Light/ Dark Modes Appearances__
     * Allows Users to switch the colour theme of the website between light and dark modes to have a different viewing experience by clicking on the "Switch to Light/Dark Mode" link on the navigation bar. 
+### Features to Implement in the Future
+* Collapsible List of Traffic Image and Details
+* Allow Users to search for more types of Weather readings across Singapore (e.g. Air Temperature, PSI value, etc.)
 
 ## Technologies Used
 * [JQuery](https://jquery.com)
