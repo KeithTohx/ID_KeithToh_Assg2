@@ -142,7 +142,7 @@ function initMap() {
                 'padding-top' : '10px',
                 'margin-bottom' : '10px'
               });
-                
+
               $("#info").append('<p class="text"><b>Camera ID: </b>' + camId + "</p>");
               $("#info").append('<p class="text"><b>Latitude: </b>' + datalatTraf + "</p>");
               $("#info").append('<p class="text"><b>Longitude: </b>' + datalngTraf + "</p>");
@@ -158,14 +158,14 @@ function initMap() {
               src.appendChild(img);
 
               document.getElementById("info").id = "infoDone";
-
+              
               // traffic info window content
               var contentStringTraf =
               '<div id="content">' +
               '<div id="siteNotice">' +
               "</div>" +
               '<div id="bodyContent">' +
-              "<p style='font-size: 14px;'>Cam ID: " + camId + 
+              "<p style='font-size: 14px;'>Camera ID: " + camId + 
               "<p style='font-size: 14px;'>Latitude: " + datalatTraf + 
               "<p style='font-size: 14px; margin-bottom: 0%;'>Longitude: " + datalngTraf + "</p>" +
               "</div>" +
@@ -189,14 +189,11 @@ function initMap() {
   }, false);
 
   // removes traffic details
-  let emtpyTraf = document.getElementById('emtpyTraf');
-  emtpyTraf.addEventListener('click', function() {
-    $(document).ready(function(updatedata) {
-      $('#traffic').remove();
-      $('#details').empty();
-      deleteMarkersTraf();
-    });
-  }, false);
+  $('#emtpyTraf').click(function(){
+    $('#traffic').remove();
+    $('#details').empty();
+    deleteMarkersTraf();
+  })
 
   // SG WEATHER - RAINFALL
   // Adds a marker to the map and push to the array
@@ -306,13 +303,10 @@ function initMap() {
   }, false);
 
   // removes rainfall details
-  let emtpyRain = document.getElementById('emtpyRain');
-  emtpyRain.addEventListener('click', function() {
-    $(document).ready(function(updatedata) {
-      $('#rain').remove();
-      deleteMarkersRain();
-    });
-  }, false);
+  $('#emtpyRain').click(function(){
+    $('#rain').remove();
+    deleteMarkersRain();
+  })
 }
 
 // for user current location
