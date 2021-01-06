@@ -12,7 +12,7 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), options);
 
   // User current location (from Google Maps Platform Documentation)
-  infoWindow = new google.maps.InfoWindow();
+  infoWindowUser = new google.maps.InfoWindow();
   const locationButton = document.createElement("button");
   locationButton.textContent = "Pan to Current Location";
   locationButton.classList.add("custom-map-control-button");
@@ -26,9 +26,8 @@ function initMap() {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           };
-          infoWindow.setPosition(pos);
-          infoWindow.setContent("Location found.");
-          infoWindow.open(map);
+          infoWindowUser.setPosition(pos);
+          infoWindowUser.setContent("<p style='font-size: 16px; margin-bottom: 0%;'><b>Your Current Location</b>");
           map.setCenter(pos);
           // create user marker on map
           var markerUser = new google.maps.Marker({
@@ -36,14 +35,9 @@ function initMap() {
             animation:google.maps.Animation.DROP,
             map: map
           });
-          let infoWindowUser = new google.maps.InfoWindow({
-            content: "<p style='font-size: 16px; margin-bottom: 0%;'><b>Your Current Location</b></p>"
-          });
-        
           markerUser.addListener('click', function(){
             infoWindowUser.open(map, markerUser);
           });
-
         },
         () => {
           handleLocationError(true, infoWindow, map.getCenter());
