@@ -177,7 +177,7 @@ function initMap() {
                 content: contentStringTraf
               });
             }
-          };
+          }
         },
         // if input is incorrect (wrong format)
         error: function(data) {
@@ -192,7 +192,7 @@ function initMap() {
     $('#traffic').remove();
     $('#details').empty();
     deleteMarkersTraf();
-  })
+  });
 
   // SG WEATHER - RAINFALL
   // Adds a marker to the map and push to the array
@@ -259,7 +259,8 @@ function initMap() {
             // display error message when no weather data found
             $("#legend").after('<p id="rain" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>No rainfall values found. Try another Date & Time.</b></p>');
           }
-          else {
+          else
+          {
             var dataTSRain = new Date(data.items[0].timestamp);
             $("#legend").after('<p id="rain" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>Weather Time Stamp: </b>' + dataTSRain + '</p>');
 
@@ -291,7 +292,7 @@ function initMap() {
                 content: contentStringRain,
               });
             }
-          };
+          }
         },
         // if input is incorrect (wrong format)
         error: function(data) {
@@ -305,7 +306,7 @@ function initMap() {
   $('#emtpyRain').click(function(){
     $('#rain').remove();
     deleteMarkersRain();
-  })
+  });
 }
 
 // for user current location
