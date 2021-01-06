@@ -150,6 +150,7 @@ function initMap() {
               $("#info").append('<p class="text"><b>Traffic Image: </b></p>');
               src.appendChild(img);
 
+              // rename div to avoid conflict in next loop
               document.getElementById("info").id = "infoDone";
               
               // traffic info window content
