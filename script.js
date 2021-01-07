@@ -153,8 +153,8 @@ function initMap() {
               // rename div to avoid conflict in next loop
               document.getElementById("info").id = "infoDone";
 
-              // if user switch to dark mode before searching
-              if (document.getElementById("mode").classList = "nav-link mode dark")
+              // if user switch to dark mode before searching for traffic
+              if ($(".mode").hasClass("nav-link mode dark"))
               {
                 $("#infoDone, #traffic.title").css({
                   'background-color' : '#404146'
@@ -277,6 +277,17 @@ function initMap() {
               var datalngRain = data.metadata.stations[i].location.longitude;
               var dataReadingUnit = data.metadata.reading_unit;
               var dataValueRain = data.items[0].readings[i].value;
+
+              // if user switch to dark mode before searching for rainfall
+              if ($(".mode").hasClass("nav-link mode dark"))
+              {
+                $("#rain.title").css({
+                  'background-color' : '#404146'
+                });
+                $("p#rain.title").css({
+                  'color' : '#edf0f1'
+                });
+              }
 
               // rainfall info window content 
               var contentStringRain =
