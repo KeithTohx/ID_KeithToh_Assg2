@@ -80,7 +80,7 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
         * Navigation bar options will collapse into a hamburger menu button.
         * The user input section will stack vertically.
 3. __Interesting Bugs/ Problems:__
-    1. When the user search for both the traffic images and weather, and tries to remove the results of the weather first, the user will then not be able to remove the results of the traffic condition unless the website is being refreshed.
+    1. When the user search for both the traffic images and weather, and tries to remove the results of the weather first, the user will then not be able to remove the icons on the Google Map representing the traffic cameras unless the website is being refreshed.
 4. __Validation:__
     The following websites were used to test the HTML, CSS and JS codes:
     1. HTML Code: [W3C MarkUp Validator](https://validator.w3.org/)
