@@ -115,6 +115,17 @@ function initMap() {
           {
             // display error message when no traffic data found
             $("#details").before('<p id="traffic" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>No traffic details found. Try another Date & Time.</b></p>');
+            
+            // if user switch to dark mode before searching for traffic
+            if ($(".mode").hasClass("nav-link mode dark"))
+            {
+              $("#traffic.title").css({
+                'background-color' : '#404146'
+              });
+              $("p#traffic.title").css({
+                'color' : '#edf0f1'
+              });
+            }
           }
           else {
             $("#details").before('<p id="traffic" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>Traffic Details</b></p>');
@@ -266,6 +277,17 @@ function initMap() {
           if (data.items[0].timestamp==""){
             // display error message when no weather data found
             $("#legend").after('<p id="rain" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>No rainfall values found. Try another Date & Time.</b></p>');
+            
+            // if user switch to dark mode before searching for rainfall
+            if ($(".mode").hasClass("nav-link mode dark"))
+            {
+              $("#rain.title").css({
+                'background-color' : '#404146'
+              });
+              $("p#rain.title").css({
+                'color' : '#edf0f1'
+              });
+            }
           }
           else
           {
