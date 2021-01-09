@@ -110,6 +110,7 @@ function initMap() {
       
         data: { "date_time": input_date },
         success: function(data) {
+          // user enter date time in correct format
           if ((data.items[0].cameras) == undefined)
           {
             // display error message when no traffic data found
@@ -261,6 +262,7 @@ function initMap() {
       
         data: { "date_time": input_date },
         success: function(data) {
+          // user enter date time in correct format
           if (data.items[0].timestamp==""){
             // display error message when no weather data found
             $("#legend").after('<p id="rain" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>No rainfall values found. Try another Date & Time.</b></p>');
