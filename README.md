@@ -38,9 +38,11 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
 * __Feature 6: Search for the Weather Condition (Rainfall value)__
     * Users can search for the rainfall values in Singapore by entering the date and time into the input box.
     * Output includes Location of Weather Stations on Map, Device ID, Coordinates of Detectors and Timestamp.
-* __Feature 7: Back to Top of Website__
+* __Feature 7: Clear Search Results__
+    * Clicking on the 'Clear Results' button removes information and Maps icons displayed on the website which are related to the search done (Traffic Images or Rainfall Values).
+* __Feature 8: Back to Top of Website__
     * Brings Users back to the Top of the Website by clicking on the "Back to Top" link at the bottom of the page.
-* __Feature 8: Light/ Dark Modes Appearances__
+* __Feature 9: Light/ Dark Modes Appearances__
     * Allows Users to switch the colour theme of the website between light and dark modes to have a different viewing experience by clicking on the "Switch to Light/Dark Mode" link on the navigation bar. 
 ### Features to Implement in the Future
 * Collapsible List of Traffic Image and Details
@@ -95,4 +97,4 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
 * Navigation Bar: [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/components/navbar/)
 * Codes for User Current Location on Google Maps: [Google Maps Platform Documentation](https://developers.google.com/maps/documentation/javascript/geolocation)
 ### Acknowledgements
-* I received inspiration for Feature 8 (Light & Dark Modes) from various Smartphone Operating Systems (e.g. Apple iOS) which offers both Light Mode and Dark Mode appearances.
+* I received inspiration for Feature 9 (Light & Dark Modes) from various Smartphone Operating Systems (e.g. Apple iOS) which offers both Light Mode and Dark Mode appearances.
