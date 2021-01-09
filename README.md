@@ -25,24 +25,26 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
 ### Existing Features 
 * __Feature 1: Collapsible Hamburger Menu__
     * When Users view the website on a smaller screen, the navigation bar will collapse into a Hamburger Menu button so that the navigation bar will not occupy a larger display space.
-* __Feature 2: Government Digital Services__
+* __Feature 2: Introduction__
+    * When Users click on 'Show Introduction' in the Introduction tab on the navigation bar, an Intoduction about the website will be displayed. Clicking on 'Hide Introduction' will remove the Introduction section.
+* __Feature 3: Government Digital Services__
     * Users can access and use the Government Digital Services related to vehicle/driving by clicking on "Online Services" tab on the navigation bar and the website links shown. They will be redirected to a new page with the website opened. 
-* __Feature 3: Emergency Hotlines/Contacts__
+* __Feature 4: Emergency Hotlines/Contacts__
     * Users can view a list of Emergency Hotlines and Contacts by clicking on the "Emergency Contact" tab on the navigation bar.
-* __Feature 4: User's Current Location on Google Maps__
+* __Feature 5: User's Current Location on Google Maps__
     * Users will be able to view their own current location/ the location where the user are when viewing the website on the Google Maps on the website.
     * Click on the "Pan to Current Location" button on the top of the map to shift the view of the map so that the User's current location is in the centre. A marker pin will also be shown on the map to represent the User's current location.
-* __Feature 5: Search for the Traffic Condition__
+* __Feature 6: Search for the Traffic Condition__
     * Users can search for the traffic condition in Singapore and traffic images by entering the date and time into the input box.
     * Output includes Location of Cameras on Map, Camera ID, Coordinates of Camera, Image of Traffic and Timestamp.
-* __Feature 6: Search for the Weather Condition (Rainfall value)__
+* __Feature 7: Search for the Weather Condition (Rainfall value)__
     * Users can search for the rainfall values in Singapore by entering the date and time into the input box.
     * Output includes Location of Weather Stations on Map, Device ID, Coordinates of Detectors and Timestamp.
-* __Feature 7: Clear Search Results__
+* __Feature 8: Clear Search Results__
     * Clicking on the 'Clear Results' button removes information and Maps icons displayed on the website which are related to the search done (Traffic Images or Rainfall Values).
-* __Feature 8: Back to Top of Website__
+* __Feature 9: Back to Top of Website__
     * Brings Users back to the Top of the Website by clicking on the "Back to Top" link at the bottom of the page.
-* __Feature 9: Light/ Dark Modes Appearances__
+* __Feature 10: Light/ Dark Modes Appearances__
     * Allows Users to switch the colour theme of the website between light and dark modes to have a different viewing experience by clicking on the "Switch to Light/Dark Mode" link on the navigation bar. 
 ### Features to Implement in the Future
 * Collapsible List of Traffic Image and Details
@@ -97,4 +99,4 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
 * Navigation Bar: [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/components/navbar/)
 * Codes for User Current Location on Google Maps: [Google Maps Platform Documentation](https://developers.google.com/maps/documentation/javascript/geolocation)
 ### Acknowledgements
-* I received inspiration for Feature 9 (Light & Dark Modes) from various Smartphone Operating Systems (e.g. Apple iOS) which offers both Light Mode and Dark Mode appearances.
+* I received inspiration for Feature 10 (Light & Dark Modes) from various Smartphone Operating Systems (e.g. Apple iOS) which offers both Light Mode and Dark Mode appearances.
