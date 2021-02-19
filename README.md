@@ -20,7 +20,7 @@ __Link to Adobe XD Wireframe: https://xd.adobe.com/view/160a2137-9de5-4af5-9391-
 
 ![Wireframe Image](images/wireframe.png)
 * The Wireframe for this project was amended later in the design process to better reflect changes to the inital plan/design and include several new features.
-* UPDATE: the layout of the website has been changed to display the traffic images in the Google Maps Info Windows. 
+* UPDATE: the layout of the website has been changed to display the traffic images in the Google Maps Information Windows instead of below the Legend. 
   
 ## Features
 ### Existing Features 
