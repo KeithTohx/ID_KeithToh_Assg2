@@ -259,9 +259,9 @@ function initMap() {
               </div>
               <div id="bodyContent">
               <p><b>Rainfall</b></p>
-              <p style='font-size: 14px;'>Device ID: ${deviceId}
-              <p style='font-size: 14px;'>Latitude: ${datalatRain}
-              <p style='font-size: 14px;'>Longitude: ${datalngRain}
+              <p style='font-size: 14px;'>Device ID: ${deviceId}</p>
+              <p style='font-size: 14px;'>Latitude: ${datalatRain}</p>
+              <p style='font-size: 14px;'>Longitude: ${datalngRain}</p>
               <p style='font-size: 14px; margin-bottom: 0%;'>Rainfall Value: ${dataValueRain}  ${dataReadingUnit}</p>
               </div>
               </div>`;
