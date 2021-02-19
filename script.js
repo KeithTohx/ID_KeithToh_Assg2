@@ -125,6 +125,7 @@ function initMap() {
               var dataTSTraf = new Date(data.items[0].cameras[i].timestamp);
               var image = data.items[0].cameras[i].image;
 
+              // traffic info window content 
               var contentStringTraf =
               `<div id="content">
               <div id="siteNotice">
@@ -312,10 +313,10 @@ $(document).ready(function () {
       $("nav, footer").css({
         'background-color' : '#24252a'
       });
-      $("a.navbar-brand, a.nav-link, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, p#traffic.title, div#infoDone p, div#legend.title p, div#intro p").css({
+      $("a.navbar-brand, a.nav-link, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, div#infoDone p, div#legend.title p, div#intro p").css({
         'color' : '#edf0f1'
       });
-      $("div.dropdown-menu, p#traffic.title, div#info, div#infoDone, p#rain.title, div#legend.title, div#intro").css({
+      $("div.dropdown-menu, p#traffic.title, p#rain.title, div#legend.title, div#intro").css({
         'background-color' : '#404146'
       });
       $("button.navbar-toggler").css({
@@ -326,13 +327,13 @@ $(document).ready(function () {
       $(this).attr('class', 'nav-link mode light');
       $("nav.navbar").attr('class', 'navbar navbar-expand-lg navbar-light');
       $("a.light").html("<i>Switch to Dark Mode</i>");
-      $("nav, footer, p#traffic.title, div#info, div#infoDone, p#rain.title, div#legend.title, div#intro").css({
+      $("nav, footer, p#traffic.title, p#rain.title, div#legend.title, div#intro").css({
         'background-color' : '#edf0f1'
       });
       $("a.nav-link").css({
         'color' : 'rgba(0,0,0,.5)'
       });
-      $("a.navbar-brand, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, p#traffic.title, div#infoDone p, div#legend.title p, div#intro p").css({
+      $("a.navbar-brand, a.dropdown-item, footer a, footer p, div.col-sm p, label, p#rain.title, div#legend.title p, div#intro p").css({
         'color' : 'black'
       });
       $("body, div.dropdown-menu").css({
