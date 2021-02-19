@@ -157,8 +157,6 @@ function initMap() {
 
   // removes traffic details
   $('#emtpyTraf').click(function(){
-    $('#traffic').remove();
-    $('#details').empty();
     deleteMarkersTraf();
   });
 
