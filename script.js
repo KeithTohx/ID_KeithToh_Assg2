@@ -117,8 +117,6 @@ function initMap() {
             alert("You have entered a future DateTime. \nNo traffic details were found. \nPlease try another Date & Time.");
           }
           else {
-            $("#details").before('<p id="traffic" class="title" style="padding-top: 12px; padding-bottom: 12px;"><b>Traffic Details</b></p>');
-
             for (var i=0; i<(data.items[0].cameras).length; i++)
             {
               var camId = data.items[0].cameras[i].camera_id;
@@ -126,56 +124,6 @@ function initMap() {
               var datalngTraf = data.items[0].cameras[i].location.longitude;
               var dataTSTraf = new Date(data.items[0].cameras[i].timestamp);
               var image = data.items[0].cameras[i].image;
-
-              var div = document.createElement("div");
-              div.id = "info";
-              var src = document.getElementById("details");
-              src.appendChild(div);
-
-              $("#info").css({
-                'background-color' : '#edf0f1',
-                'padding-bottom' : '15px',
-                'padding-top' : '10px',
-                'margin-bottom' : '10px'
-              });
-
-              $("#info").append('<p class="text"><b>Camera ID: </b>' + camId + "</p>");
-              $("#info").append('<p class="text"><b>Time Stamp: </b>' + dataTSTraf + "</p>");
-
-              // insert traffic image
-              var img = document.createElement("img");
-              img.src = image;
-              img.className = "img-fluid";
-              img.width = 320;
-              var src = document.getElementById("info");
-              $("#info").append('<p class="text"><b>Traffic Image: </b></p>');
-              src.appendChild(img);
-
-              // rename div to avoid conflict in next loop
-              document.getElementById("info").id = "infoDone";
-
-              // if user switch to dark mode before searching for traffic
-              if ($(".mode").hasClass("nav-link mode dark"))
-              {
-                $("#infoDone, #traffic.title").css({
-                  'background-color' : '#404146'
-                });
-                $("p#rain.title, p#traffic.title, div#infoDone p, div#legend.title p, div#intro p").css({
-                  'color' : '#edf0f1'
-                });
-              }
-              
-              // traffic info window content
-              // var contentStringTraf =
-              // '<div id="content">' +
-              // '<div id="siteNotice">' +
-              // "</div>" +
-              // '<div id="bodyContent">' +
-              // "<p style='font-size: 14px;'>Camera ID: " + camId + 
-              // "<p style='font-size: 14px;'>Latitude: " + datalatTraf + 
-              // "<p style='font-size: 14px; margin-bottom: 0%;'>Longitude: " + datalngTraf + "</p>" +
-              // "</div>" +
-              // "</div>";
 
               var contentStringTraf =
               `<div id="content">
