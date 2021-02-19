@@ -166,16 +166,29 @@ function initMap() {
               }
               
               // traffic info window content
+              // var contentStringTraf =
+              // '<div id="content">' +
+              // '<div id="siteNotice">' +
+              // "</div>" +
+              // '<div id="bodyContent">' +
+              // "<p style='font-size: 14px;'>Camera ID: " + camId + 
+              // "<p style='font-size: 14px;'>Latitude: " + datalatTraf + 
+              // "<p style='font-size: 14px; margin-bottom: 0%;'>Longitude: " + datalngTraf + "</p>" +
+              // "</div>" +
+              // "</div>";
+
               var contentStringTraf =
-              '<div id="content">' +
-              '<div id="siteNotice">' +
-              "</div>" +
-              '<div id="bodyContent">' +
-              "<p style='font-size: 14px;'>Camera ID: " + camId + 
-              "<p style='font-size: 14px;'>Latitude: " + datalatTraf + 
-              "<p style='font-size: 14px; margin-bottom: 0%;'>Longitude: " + datalngTraf + "</p>" +
-              "</div>" +
-              "</div>";
+              `<div id="content">
+              <div id="siteNotice">
+              </div>
+              <div id="bodyContent">
+              <p style='font-size: 14px;'>Camera ID:  ${camId}</p>
+              <p style='font-size: 14px;'>Latitude: ${datalatTraf}</p>
+              <p style='font-size: 14px;'>Longitude: ${datalngTraf}</p>
+              <p style='font-size: 14px;'>Time Stamp: ${dataTSTraf}</p>
+              <img src='${image}' class='img-fluid' style='width: 320'>
+              </div>
+              </div>`;
 
               // call function to add marker on map
               addMarkerTraf({
