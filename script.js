@@ -136,7 +136,7 @@ function initMap() {
               <p style='font-size: 14px;'>Latitude: ${datalatTraf}</p>
               <p style='font-size: 14px;'>Longitude: ${datalngTraf}</p>
               <p style='font-size: 14px;'>Time Stamp: ${dataTSTraf}</p>
-              <img src='${image}' class='img-fluid' style='width: 320'>
+              <img id='traffic_img' src='${image}' class='img-fluid' style='width: 320'>
               </div>
               </div>`;
 

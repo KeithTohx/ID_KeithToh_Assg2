@@ -46,3 +46,7 @@ footer {
     line-height: 25px;
     font-size: 20px;
 }
+
+.img_fluid {
+    width: 500px;
+}
